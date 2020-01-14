@@ -1,0 +1,1 @@
+// $('.top-content').backstretch("assets/img/hero.png");

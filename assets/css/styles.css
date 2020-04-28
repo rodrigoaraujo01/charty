@@ -112,4 +112,6 @@ h1, h2 {
 .carousel-control-next,
 .carousel-control-prev {
     filter: invert(var(--invert-control));
+    margin: 0;
+    width:20px;
 }

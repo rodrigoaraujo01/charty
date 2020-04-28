@@ -160,23 +160,45 @@
                 <div class="d-none d-md-block">
                     <div class="row text-left mt-4">
                         <div class="col-4">
-                            <picture>
-                                <source srcset="../assets/img/examples/csv/add_from_csv_dark.png" media="(prefers-color-scheme: dark)">
-                                    <img src="../assets/img/examples/csv/add_from_csv_light.png" class="img-fluid rounded" width="400" alt="">
-                                </picture>
+                            <div class="row">
+                                <div class="col">
+                                    <picture>
+                                        <source srcset="../assets/img/examples/csv/add_from_csv_dark.png" media="(prefers-color-scheme: dark)">
+                                        <img src="../assets/img/examples/csv/add_from_csv_light.png" class="img-fluid rounded" width="400" alt="">
+                                    </picture>
+                                    <figcaption class="text-center figure-caption">Parameters when Series Type is Bar, Line or Scatter.</figcaption>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <picture>
+                                        <source srcset="../assets/img/examples/csv/add_from_csv_pie_dark.png" media="(prefers-color-scheme: dark)">
+                                        <img src="../assets/img/examples/csv/add_from_csv_pie_light.png" class="img-fluid rounded" width="400" alt="">
+                                    </picture>
+                                    <figcaption class="text-center figure-caption">Parameters when Series Type is Donut or Pie.</figcaption>
+                                </div>
+                            </div>
                         </div> 
                         <div class="col-6">
                             <ul>
                                 <li><strong>CSV:</strong> this parameter will receive a CSV file opened in Shortcuts with one of the two actions cited above;</li>
-                                <li><strong>Series type:</strong> the type of series that'll be added from this CSV file;</li>
                                 <li><strong>Chart ID:</strong> the ID of the chart into which the series should be added;</li>
-                                <li><strong>X Columns:</strong> a list of column names to use as x values for the series.
-                                    <ul>
-                                        <li>If X Columns is left empty, the index of each row will be used as the x values;</li>
-                                        <li>If X Columns only contains one value, the same column will be used as the x values for all series.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Y Columns:</strong> a list of column names to use as y values for the series;</li>
+                                <li><strong>Series type:</strong> the type of series that'll be added from this CSV file. The options are: Bar, Line, Scatter, Pie and Donut;</li>
+                                <p class="mb-0 text-info"><em>When <em>Bar</em>, <em>Line</em> or <em>Scatter</em> are selected as the series type, you'll see the next two parameters</em></p>
+                                <ul>
+                                    <li><strong>X Columns:</strong> a list of column names to use as x values for the series. As this is a list, you can add extra values by tapping the plus (+) sign that appears after you insert the first value.
+                                        <ul>
+                                            <li>If X Columns is left empty, the index of each row will be used as the x values;</li>
+                                            <li>If X Columns only contains one value, the same column will be used as the x values for all series.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Y Columns:</strong> a list of column names to use as y values for the series. You can also add extra values by tapping the plus (+) sign that appears after you insert the first value;</li>
+                                </ul>
+                                <p class="mb-0 text-info">When <em>Pie</em> or <em>Donut</em> are selected as the series type, you'll see the next two text parameters</p>
+                                <ul>
+                                    <li><strong>Labels column:</strong> the name of the column that holds the labels for each slice of your pie or donut;</li>
+                                    <li><strong>Values column:</strong> the name of the column that holds the values for each slice of your pie or donut;</li>
+                                </ul>
                                 <li><strong>Separator:</strong> Defines the CSV column separator.Default value: , (comma);</li>
                                 <li><strong>Decimal symbol:</strong> Defines the floating point separator.\nDefault value: . (dot);</li>
                             </ul>
@@ -186,23 +208,57 @@
                 <div class="d-md-none">
                     <div class="row mt-4">
                         <div class="col-12">
-                            <picture>
-                                <source srcset="../assets/img/examples/csv/add_from_csv_dark.png" media="(prefers-color-scheme: dark)">
-                                <img src="../assets/img/examples/csv/add_from_csv_light.png" class="img-fluid rounded" width="400" alt="">
-                            </picture>
-                            <ul class="text-left mt-4">
+                            <div id="AddCSVActions" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <picture>
+                                            <source srcset="../assets/img/examples/csv/add_from_csv_dark.png" media="(prefers-color-scheme: dark)">
+                                            <img src="../assets/img/examples/csv/add_from_csv_light.png" class="img-fluid rounded" width="80%" alt="">
+                                        </picture>
+                                        <figcaption class="text-center figure-caption">Parameters when Series Type is Bar, Line or Scatter.</figcaption>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="../assets/img/examples/csv/add_from_csv_pie_dark.png" media="(prefers-color-scheme: dark)">
+                                            <img src="../assets/img/examples/csv/add_from_csv_pie_light.png" class="img-fluid rounded" width="80%" alt="">
+                                        </picture>
+                                        <figcaption class="text-center figure-caption">Parameters when Series Type is Donut or Pie.</figcaption>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#AddCSVActions" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#AddCSVActions" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="text-left mt-4 pl-4">
                                 <li><strong>CSV:</strong> this parameter will receive a CSV file opened in Shortcuts with one of the two actions cited above;</li>
-                                <li><strong>Series type:</strong> the type of series that'll be added from this CSV file;</li>
                                 <li><strong>Chart ID:</strong> the ID of the chart into which the series should be added;</li>
-                                <li><strong>X Columns:</strong> a list of column names to use as x values for the series.
-                                    <ul>
-                                        <li>If X Columns is left empty, the index of each row will be used as the x values;</li>
-                                        <li>If X Columns only contains one value, the same column will be used as the x values for all series.</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Y Columns:</strong> a list of column names to use as y values for the series;</li>
-                                <li><strong>Separator:</strong> Defines the CSV column separator.Default value: , (comma);</li>
-                                <li><strong>Decimal symbol:</strong> Defines the floating point separator.\nDefault value: . (dot);</li>
+                                <li><strong>Series type:</strong> the type of series that'll be added from this CSV file. The options are: Bar, Line, Scatter, Pie and Donut;</li>
+                                <p class="mb-0 text-info"><em>When <em>Bar</em>, <em>Line</em> or <em>Scatter</em> are selected as the series type, you'll see the next two parameters</em></p>
+                                <ul class="pl-4">
+                                    <li><strong>X Columns:</strong> a list of column names to use as x values for the series. As this is a list, you can add extra values by tapping the plus (+) sign that appears after you insert the first value.
+                                        <ul class="pl-4">
+                                            <li>If X Columns is left empty, the index of each row will be used as the x values;</li>
+                                            <li>If X Columns only contains one value, the same column will be used as the x values for all series.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Y Columns:</strong> a list of column names to use as y values for the series. You can also add extra values by tapping the plus (+) sign that appears after you insert the first value;</li>
+                                </ul>
+                                <p class="mb-0 text-info">When <em>Pie</em> or <em>Donut</em> are selected as the series type, you'll see the next two text parameters</p>
+                                <ul class="pl-4">
+                                    <li><strong>Labels column:</strong> the name of the column that holds the labels for each slice of your pie or donut;</li>
+                                    <li><strong>Values column:</strong> the name of the column that holds the values for each slice of your pie or donut;</li>
+                                </ul>
+                                <li><strong>Separator:</strong> Defines the CSV column separator. Default value: , (comma);</li>
+                                <li><strong>Decimal symbol:</strong> Defines the floating point separator. Default value: . (dot);</li>
                             </ul>
                         </div>
                     </div>
@@ -262,7 +318,7 @@
                         </div> 
                         <div class="col-6">
                             <h6><strong>Create Chart</strong></h6>
-                            <p>This action simply creates a new Chart with thet title "CSV example" and assigns it an automatic ID. This ID is the output of this action, so we can use it in Add Series From CSV action.</p>
+                            <p>This action simply creates a new Chart with the title "CSV example" and assigns it an automatic ID. This ID is the output of this action, so we can use it in Add Series From CSV action.</p>
                             <h6><strong>Get Contents of URL</strong></h6>
                             <p>As we saw, this action downloads the contents of CSV file hosted on Charty's servers.</p>
                             <h6><strong>Add Series From CSV</strong></h6>
@@ -282,7 +338,7 @@
                             </picture>
                             <div class="text-left mt-4">
                                 <h6><strong>Create Chart</strong></h6>
-                                <p>This action simply creates a new Chart with thet title "CSV example" and assigns it an automatic ID. This ID is the output of this action, so we can use it in Add Series From CSV action.</p>
+                                <p>This action simply creates a new Chart with the title "CSV example" and assigns it an automatic ID. This ID is the output of this action, so we can use it in Add Series From CSV action.</p>
                                 <h6><strong>Get Contents of URL</strong></h6>
                                 <p>As we saw, this action downloads the contents of CSV file hosted on Charty's servers.</p>
                                 <h6><strong>Add Series From CSV</strong></h6>
@@ -302,6 +358,12 @@
                             <source srcset="../assets/img/examples/csv/charty_dark.png" media="(prefers-color-scheme: dark)">
                             <img src="../assets/img/examples/csv/charty_light.png" class="img-fluid rounded" width="400" alt="">
                         </picture>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <button type="button" class="btn btn-primary"><a class="text-white" href="https://www.icloud.com/shortcuts/accc7d03903441449a4d30b59928cbfc">Download the shortcut</a></button>
                     </div>
                 </div>
 
@@ -325,14 +387,15 @@
         </div>
 
         <!-- Javascript -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
         <!-- <script src="assets/js/wow.min.js"></script> -->
         <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
         <!-- <script src="assets/js/waypoints.min.js"></script> -->
-        <script src="assets/js/scripts.js"></script>
+        <script src="../assets/js/scripts.js"></script>
     </body>
 </html>

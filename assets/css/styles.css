@@ -4,6 +4,7 @@
     --secondary-background: #fff;
     --page-title: #555;
     --page-text: #555;
+    --invert-control: 100%;
 }
   
 @media screen and (prefers-color-scheme: dark) {
@@ -12,9 +13,9 @@
         --secondary-background: #2C2C2E;
         --page-title: #fff;
         --page-text: #fff;
+        --invert-control: 0%;
     }
 }
-  
 
 html {
     background-color: var(--secondary-background);
@@ -106,4 +107,9 @@ h1, h2 {
 
 #footer {
     background-color: var(--secondary-background)
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(var(--invert-control));
 }

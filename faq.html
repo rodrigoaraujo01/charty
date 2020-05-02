@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h1>Frequently Asked Questions</h1>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>Here's a running list of frequently asked questions about Charty. If your question isn't covered here, don't hesitate to <a href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Get in touch</a>.</p>
+                        <h3>Index</h3>
+                        <ul>
+                            <li><a href="#general">General</a></li>
+                            <ul>
+                                <li><a href="#q11">What is Charty?</a></li>
+                                <li><a href="#q12">What is Shortcuts?</a></li>
+                                <li><a href="#q13">Are there other Shortcuts Utility Apps?</a></li>
+                                <li><a href="#q14">How much does Charty cost?</a></li>
+                                <li><a href="#q15">What kind of charts can I create with Charty?</a></li>
+                            </ul>
+                            <li><a href="#shortcuts">Shortcuts</a></li>
+                            <ul>
+                                <li><a href="#q21">What actions does Charty add to Shortcuts?</a></li>
+                                <li><a href="#q22">What's the simplest chart I can create with Charty?</a></li>
+                                <li><a href="#q23">What kind of data should I pass to Charty's values parameters?</a></li>
+                            </ul>
+                            <li><a href="#data-sources">Data sources</a></li>
+                            <ul>
+                                <li><a href="#q31">What Data Sources can I use with Charty?</a></li>
+                                <li><a href="#q32">Does Charty support data from HealthKit?</a></li>
+                                <li><a href="#q33">Why "almost any data"? Is something missing from HealthKit Shortcuts support?</a></li>
+                                <li><a href="#q34">What about APIs?</a></li>
+                                <li><a href="#q35">Does Charty support CSV files?</a></li>
+                            </ul>
+                            <li><a href="#customization">Customization</a></li>
+                            <ul>
+                                <li><a href="#q41">Can I change the chart theme from Shortcuts?</a></li>
+                                <li><a href="#q42">Can I add custom color themes to Charty?</a></li>
+                                <li><a href="#q43">Can I add custom labels to an axis?</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="general" class="section text-center my-4"><strong>General questions</strong></h3>
+                        
+                        <h4 id="q11" class="section">What is Charty?</h4>
+                        <p>Charty is an iOS app that allows you to create charts directly from Apple's Shortcuts app. It's part of a flourishing category of apps that's known as <a href="https://www.macstories.net/linked/appstories-episode-145-shortcuts-utility-apps/">Shortcuts Utility Apps</a>.</p>
+                        
+                        <h4 id="q12" class="section">What is Shortcuts?</h4>
+                        <p>Shortcuts is the tool to create automation workflows on iOS and iPadOS.</p>
+                        <p>Quoting Apple: <em>Shortcuts includes over 300 built-in actions and works with many of your favorite apps including Contacts, Calendar, Maps, Music, Photos, Camera, Reminders, Safari, Health as well as any app that supports Siri Shortcuts.</em>.</p>
+                        
+                        <h4 id="q13" class="section">Are there other Shortcuts Utility Apps?</h4>
+                        <p>There are 5 other apps in this category besides Charty.</p>
+                        <ul>
+                            <li><a href="http://toolboxpro.app">Toolbox Pro</a></li>
+                            <li><a href="http://launchcuts.com">LaunchCuts</a></li>
+                            <li><a href="http://pushcut.io">Pushcut</a></li>
+                            <li><a href="https://shortcutify.app">Shortcutify</a></li>
+                            <li><a href="http://datajar.app">Data Jar</a></li>
+                        </ul>
+                        
+                        <h4 id="q14" class="section">How much does Charty cost?</h4>
+                        <p>Charty is free to download with 4 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Chart</strong>.</p>
+                        <p class="mb-0">A one-time in-app purchase unlocks:</p>
+                        <ul>
+                            <li>7 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong> and <strong>Style Scatter Series</strong></li>
+                            <li>Series styling and customisation (line width, stacked bars, markers size, series' colors, etc)</li>
+                            <li>Axis styling and label customisation (date time format, custom labels, etc)</li>
+                            <li>Unlimited series per chart</li>
+                            <li>27+ extra icons</li>
+                        </ul>
+                        <p>This in-app purchase will cost <strong>$2.99</strong> on the first month after release as a way to thank the support received from the community. After that, it'll be raised to <strong>$4.99</strong>.</p>
+                        
+                        <h4 id="q15" class="section">What kind of charts can I create with Charty?</h4>
+                        <p>Using Charty, you can create 5 types of charts: Bar, Line, Scatter, Pie and Donut.</p>
+                        <div class="row">
+                            <div class="col-sm-4 col-6 mb-3">
+                                <picture>
+                                    <source srcset="assets/img/faq/stacked_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/faq/stacked_light.png" class="img-fluid rounded" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-sm-4 col-6 mb-3">
+                                <picture>
+                                    <source srcset="assets/img/faq/grouped_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/faq/grouped_light.png" class="img-fluid rounded" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-sm-4 col-6 mb-3">
+                                <picture>
+                                    <source srcset="assets/img/faq/line_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/faq/line_light.png" class="img-fluid rounded" alt="">
+                                </picture> 
+                            </div> 
+                            <div class="col-sm-4 col-6 mb-3">
+                                <picture>
+                                    <source srcset="assets/img/faq/scatter_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/faq/scatter_light.png" class="img-fluid rounded" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-sm-4 col-6 mb-3">
+                                <picture>
+                                    <source srcset="assets/img/faq/pie_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/faq/pie_light.png" class="img-fluid rounded" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-sm-4 col-6 mb-3">
+                                <picture>
+                                    <source srcset="assets/img/faq/donut_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/faq/donut_light.png" class="img-fluid rounded" alt="">
+                                </picture>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="shortcuts" class="section text-center my-4"><strong>Shortcuts</strong></h3>
+                        <h4 id="q21" class="section">What actions does Charty add to Shortcuts?</h4>
+                        <p>Charty adds 11 powerful new actions to Shortcuts:</p>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Action</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Free/Premium</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>New Chart</td>
+                                <td>Creates a new chart with the given chart title</td>
+                                <td class="text-success"><strong>Free</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Add Series To Chart</td>
+                                <td>Adds a new series to a given chart</td>
+                                <td class="text-success"><strong>Free</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Get Information From All Charts</td>
+                                <td>Gets a dictionary of all charts, indexed by the charts' ids and containing all of the information available for each chart, except series points.</td>
+                                <td class="text-success"><strong>Free</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Delete Chart</td>
+                                <td>Deletes the chart with the given ID</td>
+                                <td class="text-success"><strong>Free</strong></td>
+                              </tr>
+                              <tr>
+                                <td>New Chart With Series</td>
+                                <td>Creates a new chart and adds a new series to it</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Copy Chart To Clipboard</td>
+                                <td>Exports the chart with the given ID as an image using the provided export profile, and passes the resulting image to the clipboard</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Add Series From CSV</td>
+                                <td>Adds new series from a CSV file</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Style Axis</td>
+                                <td>Use this action to style any of the parameters for a given axis</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Style Bar Series</td>
+                                <td>Modifies the attributes of a given bar series</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Style Line Series</td>
+                                <td>Modifies the attributes of a given line series</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Style Scatter Series</td>
+                                <td>Modifies the attributes of a given scatter series</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 id="q22" class="section">What's the simplest chart I can create with Charty?</h4>
+                        <p>Here's a <a href="https://www.icloud.com/shortcuts/a2b8e7d30c0b42d8bfef7e2f87273560">link</a> to download the simplest shortcut possible. It uses Charty's <strong>New Chart</strong> and <strong>Add Series To Chart</strong> actions to create a very simple bar chart.</p>
+                        
+                        <h4 id="q23" class="section">What kind of data should I pass to Charty's values parameters?</h4>
+                        <p>If you have data stored as text with one value per line and no headers, you can pass the text directly as X or Y values to Charty. But you'll usually be using repeat loops (either <strong>Repeat</strong> or <strong>Repeat With Each</strong>) combined with the <strong>Add To Variable</strong> action to create lists of values.</p>
+                        <p>The first part of <a href="tutorials/custom_x_labels.html">this tutorial</a> details how you can use a repeat loop to create a list.</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="data-sources" class="section text-center my-4"><strong>Data sources</strong></h3>
+                        <h4 id="q31" class="section">What Data Sources can I use with Charty?</h4>
+                        <p>Virtually, any data source that provides Shortcuts support can be used with Charty.</p>
+                        <p>For example, if you store data in text notes inside the Notes app, you can extract them using the <strong>Find Notes</strong> action. You can then process it with Shortcuts and plot it with Charty.</p>
+
+                        <h4 id="q32" class="section">Does Charty support data from HealthKit?</h4>
+                        <p>Of course! It's not widely know, but HealthKit has great Shortcuts support. You can use the <strong>Find Health Samples</strong> action to get almost any data from HealthKit. You can then process it with Shortcuts and plot it with Charty.</p>
+                        
+                        <h4 id="q33" class="section">Why "almost any data"? Is something missing from HealthKit Shortcuts support?</h4>
+                        <p>Unfortunately, yes. You can't extract Workouts and Activity data with Health's default actions. But, if you buy <a href="https://toolbox.pro">Toolbox Pro</a> premium package, you'll get the premium actions <strong>Get Activity</strong> and <strong>Get Workouts</strong> that solve this problem.</p>
+
+                        <h4 id="q34" class="section">What about APIs?</h4>
+                        <p>API data can also be extracted and plotted with Charty. You can use the <strong>Get Contents of URL</strong> action to make a request to the API. You can then process it with Shortcuts and plot it with Charty.</p>
+                        <p>Here's an <a href="">example</a> that queries a <a href="https://github.com/pomber/covid19">COVID-19 tracking API</a> and creates charts such as the one below using Charty.</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-4"></div> 
+                    <div class="col-12 col-md-4">
+                        <picture>
+                            <source srcset="assets/img/faq/covid_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/covid_light.png" class="img-fluid rounded" alt="">
+                        </picture> 
+                        <figcaption class="text-center figure-caption mb-3">COVID-19 cases chart generated from API data</figcaption>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 id="q35" class="section">Does Charty support CSV files?</h4>
+                        <p>Charty's Premium version has great support for CSV files through the <strong>Add Series From CSV</strong> action. With it, you can select which of the CSV file's columns should be used as x values and which should be used as y values. If you want more information about this action, you can check the tutorial <a href="tutorials/csv.html">How to plot data from a CSV file</a>.</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="customization" class="section text-center my-4"><strong>Customization</strong></h3>
+
+                        <h4 id="q41" class="section">Can I change the chart theme from Shortcuts?</h4>
+                        <p>Currently, you can't modify a given chart's theme directly from a shortcut. As a workaround, you can modify the default theme with which your charts are created from the Default values view in Charty's Settings.</p>
+                        
+                        <h4 id="q42" class="section">Can I add custom color themes to Charty?</h4>
+                        <p>Currently, Charty doesn't have a way to create custom color themes in the app. As a workaround, you can use a text action to store your custom theme colors and then use one of the 3 <strong>Style Series</strong> actions to change the color of the series accordingly.</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-4"></div> 
+                    <div class="col-12 col-md-4">
+                        <picture>
+                            <source srcset="assets/img/faq/custom_theme_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/custom_theme_light.png" class="img-fluid rounded" alt="">
+                        </picture> 
+                        <figcaption class="text-center figure-caption mb-3">Custom palette</figcaption>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>You can download <a href="https://www.icloud.com/shortcuts/1f6ed417ffb74167bcf85009b5904caf">this shortcut example</a> that uses the above custom theme to create the following chart.</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-4"></div> 
+                    <div class="col-12 col-md-4">
+                        <picture>
+                            <source srcset="assets/img/faq/custom_theme_chart_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/custom_theme_chart_light.png" class="img-fluid rounded" alt="">
+                        </picture> 
+                        <figcaption class="text-center figure-caption mb-3">Chart created with custom palette</figcaption>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 id="q43" class="section">Can I add custom labels to an axis?</h4>
+                        <p>Using Charty's premium action <strong>Style Axis</strong> you can modify the value formatter for all axes. So you can set it to a custom formatter, passing a list of labels and their corresponding custom labels. You can check the tutorial <a href="tutorials/custom_x_labels.html">How to add custom labels to an axis</a> for more information about this action.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="assets/js/wow.min.js"></script> -->
+        <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="assets/js/waypoints.min.js"></script> -->
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

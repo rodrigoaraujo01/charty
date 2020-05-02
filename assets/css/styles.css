@@ -127,3 +127,8 @@ h1, h2 {
 .bg-shortcut-empty {
     background-color: #ECF1FB;
 }
+
+.section {
+    padding-top: 60px;
+    margin-top: -60px;
+}

@@ -115,3 +115,15 @@ h1, h2 {
     margin: 0;
     width:20px;
 }
+.text-orange {
+    color: #FF9502;
+}
+.bg-shortcut-1 {
+    background-color: #D56C6B;
+}
+.bg-shortcut-2 {
+    background-color: rgb(202, 124, 72);
+}
+.bg-shortcut-empty {
+    background-color: #ECF1FB;
+}

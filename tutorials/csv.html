@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h1>How to plot data from a CSV file</h1>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>CSV stands for Comma Separated Values, and they are a great and simple solution to store data in table format using plain text files. This tutorial will look into how we can get data from a CSV file and used it to create charts using Charty.</p>
+                    </div>
+                </div>
+
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h5 class="mb-4">Using CSV files in Shortcuts</h5>
+                        <p>There are two main ways to use that CSV file with Shortcuts:</p>
+                        <ul>
+                            <li>Getting it locally with the <strong>Get File</strong> action</li>
+                            <li>Getting it online with the <strong>Get Contents of URL</strong> action</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/csv/get_file_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/csv/get_file_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                        </div> 
+                        <div class="col-6">
+                            <h6><strong>The Get File action</strong></h6>
+                            <p>This action has only 4 parameters:</p>
+                            <ul>
+                                <li><strong>Service:</strong> defines the cloud service Shortcuts should use to get the file. I defaults to iCloud Drive, but could also be Dropbox;</li>
+                                <li><strong>Show Document Picker:</strong> If it's on, every time the shortcut run, it'll prompt you for a file. If it's off, the next parameter is enabled;</li>
+                                <li><strong>File Path:</strong> this a standard system path to the file we're trying to access. Notice that, when iCloud Drive has been selected as the service, due to iOS sandboxing restrictions, Shortcuts can only access files inside its iCloud Drive Folder;</li>
+                                <li><strong>Error If Not Found:</strong> if on, will display an error if the file can't be found and will stop the shortcut.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/csv/get_url_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/csv/get_url_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                        </div> 
+                        <div class="col-6">
+                            <h6><strong>The Get Contents of URL action</strong></h6>
+                            <p>This action has 1 main parameter:</p>
+                            <ul>
+                                <li><strong>URL:</strong> defines where in the web your CSV file is hosted. In our example, we're showing a CSV hosted in Charty's servers to be used with its examples.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h6 class="text-center mb-4"><strong>The Get File action</strong></h6>
+                            <picture>
+                                <source srcset="../assets/img/tutorials/csv/get_file_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/csv/get_file_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>    
+                            <p class="text-left mt-4">This action has only 4 parameters:</p>
+                            <ul class="text-left">
+                                <li><strong>Service:</strong> defines the cloud service Shortcuts should use to get the file. I defaults to iCloud Drive, but could also be Dropbox.</li>
+                                <li><strong>Show Document Picker:</strong> If it's on, every time the shortcut run, it'll prompt you for a file. If it's off, the next parameter is enabled.</li>
+                                <li><strong>File Path:</strong> this a standard system path to the file we're trying to access. Notice that, when iCloud Drive has been selected as the service, due to iOS sandboxing restrictions, Shortcuts can only access files inside its iCloud Drive Folder.</li>
+                                <li><strong>Error If Not Found:</strong> if on, will display an error if the file can't be found and will stop the shortcut.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <h6 class="text-center mb-4"><strong>The Get Contents of URL action</strong></h6>
+                            <picture>
+                                <source srcset="../assets/img/tutorials/csv/get_url_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/csv/get_url_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <p class="mt-4 text-left">This action has 1 main parameter:</p>
+                            <ul class="text-left">
+                                <li><strong>URL:</strong> defines where in the web your CSV file is hosted. In our example, we're showing a CSV hosted in Charty's servers to be used with its examples.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h5 class="mb-4">Charty's Add Series From CSV action</h5>
+                        <p>In order to add data from a CSV file to a chart, Charty provides the handy Add Series From CSV action.</p>
+                    </div>
+                </div>
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col">
+                                    <picture>
+                                        <source srcset="../assets/img/tutorials/csv/add_from_csv_dark.png" media="(prefers-color-scheme: dark)">
+                                        <img src="../assets/img/tutorials/csv/add_from_csv_light.png" class="img-fluid rounded" width="400" alt="">
+                                    </picture>
+                                    <figcaption class="text-center figure-caption">Parameters when Series Type is Bar, Line or Scatter.</figcaption>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col">
+                                    <picture>
+                                        <source srcset="../assets/img/tutorials/csv/add_from_csv_pie_dark.png" media="(prefers-color-scheme: dark)">
+                                        <img src="../assets/img/tutorials/csv/add_from_csv_pie_light.png" class="img-fluid rounded" width="400" alt="">
+                                    </picture>
+                                    <figcaption class="text-center figure-caption">Parameters when Series Type is Donut or Pie.</figcaption>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-6">
+                            <ul>
+                                <li><strong>CSV:</strong> this parameter will receive a CSV file opened in Shortcuts with one of the two actions cited above;</li>
+                                <li><strong>Chart ID:</strong> the ID of the chart into which the series should be added;</li>
+                                <li><strong>Series type:</strong> the type of series that'll be added from this CSV file. The options are: Bar, Line, Scatter, Pie and Donut;</li>
+                                <p class="mb-0 text-info"><em>When <em>Bar</em>, <em>Line</em> or <em>Scatter</em> are selected as the series type, you'll see the next two parameters</em></p>
+                                <ul>
+                                    <li><strong>X Columns:</strong> a list of column names to use as x values for the series. As this is a list, you can add extra values by tapping the plus (+) sign that appears after you insert the first value.
+                                        <ul>
+                                            <li>If X Columns is left empty, the index of each row will be used as the x values;</li>
+                                            <li>If X Columns only contains one value, the same column will be used as the x values for all series.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Y Columns:</strong> a list of column names to use as y values for the series. You can also add extra values by tapping the plus (+) sign that appears after you insert the first value;</li>
+                                </ul>
+                                <p class="mb-0 text-info">When <em>Pie</em> or <em>Donut</em> are selected as the series type, you'll see the next two text parameters</p>
+                                <ul>
+                                    <li><strong>Labels column:</strong> the name of the column that holds the labels for each slice of your pie or donut;</li>
+                                    <li><strong>Values column:</strong> the name of the column that holds the values for each slice of your pie or donut;</li>
+                                </ul>
+                                <li><strong>Separator:</strong> Defines the CSV column separator.Default value: , (comma);</li>
+                                <li><strong>Decimal symbol:</strong> Defines the floating point separator.\nDefault value: . (dot);</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div id="AddCSVActions" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <picture>
+                                            <source srcset="../assets/img/tutorials/csv/add_from_csv_dark.png" media="(prefers-color-scheme: dark)">
+                                            <img src="../assets/img/tutorials/csv/add_from_csv_light.png" class="img-fluid" width="85%" alt="">
+                                        </picture>
+                                        <figcaption class="text-center figure-caption">Parameters for Bar, Line or Scatter series.</figcaption>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <picture>
+                                            <source srcset="../assets/img/tutorials/csv/add_from_csv_pie_dark.png" media="(prefers-color-scheme: dark)">
+                                            <img src="../assets/img/tutorials/csv/add_from_csv_pie_light.png" class="img-fluid" width="85%" alt="">
+                                        </picture>
+                                        <figcaption class="text-center figure-caption">Parameters for Donut or Pie series.</figcaption>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#AddCSVActions" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#AddCSVActions" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="text-left mt-4 pl-4">
+                                <li><strong>CSV:</strong> this parameter will receive a CSV file opened in Shortcuts with one of the two actions cited above;</li>
+                                <li><strong>Chart ID:</strong> the ID of the chart into which the series should be added;</li>
+                                <li><strong>Series type:</strong> the type of series that'll be added from this CSV file. The options are: Bar, Line, Scatter, Pie and Donut;</li>
+                                <p class="mb-0 text-info"><em>When <em>Bar</em>, <em>Line</em> or <em>Scatter</em> are selected as the series type, you'll see the next two parameters</em></p>
+                                <ul class="pl-4">
+                                    <li><strong>X Columns:</strong> a list of column names to use as x values for the series. As this is a list, you can add extra values by tapping the plus (+) sign that appears after you insert the first value.
+                                        <ul class="pl-4">
+                                            <li>If X Columns is left empty, the index of each row will be used as the x values;</li>
+                                            <li>If X Columns only contains one value, the same column will be used as the x values for all series.</li>
+                                        </ul>
+                                    </li>
+                                    <li><strong>Y Columns:</strong> a list of column names to use as y values for the series. You can also add extra values by tapping the plus (+) sign that appears after you insert the first value;</li>
+                                </ul>
+                                <p class="mb-0 text-info">When <em>Pie</em> or <em>Donut</em> are selected as the series type, you'll see the next two text parameters</p>
+                                <ul class="pl-4">
+                                    <li><strong>Labels column:</strong> the name of the column that holds the labels for each slice of your pie or donut;</li>
+                                    <li><strong>Values column:</strong> the name of the column that holds the values for each slice of your pie or donut;</li>
+                                </ul>
+                                <li><strong>Separator:</strong> Defines the CSV column separator. Default value: , (comma);</li>
+                                <li><strong>Decimal symbol:</strong> Defines the floating point separator. Default value: . (dot);</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h5 class="my-4">Real World Example</h5>
+                        <p>Let's suppose that we'd like to plot a CSV file like the one below.</p>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Min temp</th>
+                                <th scope="col">Max temp</th>
+                                <th scope="col">% rain</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>01/01/20</td>
+                                <td>19</td>
+                                <td>25</td>
+                                <td>50</td>
+                              </tr>
+                              <tr>
+                                <td>01/02/20</td>
+                                <td>20</td>
+                                <td>27</td>
+                                <td>82</td>
+                              </tr>
+                              <tr>
+                                <td>01/03/20</td>
+                                <td>17</td>
+                                <td>21</td>
+                                <td>80</td>
+                              </tr>
+                              <tr>
+                                <td>01/04/20</td>
+                                <td>20</td>
+                                <td>22</td>
+                                <td>100</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <figcaption class="text-center figure-caption mb-2">This file is available at https://chartyios.app/csv/example.csv</figcaption>
+                          <p>Here's what the shortcut to plot the minimum and maximum temperatures from this CSV file would look like:</p>
+                    </div>
+                </div>
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/csv/shortcut_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/csv/shortcut_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                        </div> 
+                        <div class="col-6">
+                            <h6><strong>Create Chart</strong></h6>
+                            <p>This action simply creates a new Chart with the title "CSV example" and assigns it an automatic ID. This ID is the output of this action, so we can use it in Add Series From CSV action.</p>
+                            <h6><strong>Get Contents of URL</strong></h6>
+                            <p>As we saw, this action downloads the contents of CSV file hosted on Charty's servers.</p>
+                            <h6><strong>Add Series From CSV</strong></h6>
+                            <p>And here is where the magic happens 🎩!</p>
+                            <p>We set the contents of the URL as the CSV parameter, and use the magic variable Chart Id obtained from the Create Chart to define the chart that'll receive these series.</p>
+                            <p>Then, we define that the Date column will hold the X Values for both series. And the Y values will be obtained from two different columns: Min temp and Max temp.</p>
+                            <p>And that's it, as this CSV file uses the default column and floating point separator (, and . respectively), there's nothing left to setup.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/csv/shortcut_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/csv/shortcut_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <div class="text-left mt-4">
+                                <h6><strong>Create Chart</strong></h6>
+                                <p>This action simply creates a new Chart with the title "CSV example" and assigns it an automatic ID. This ID is the output of this action, so we can use it in Add Series From CSV action.</p>
+                                <h6><strong>Get Contents of URL</strong></h6>
+                                <p>As we saw, this action downloads the contents of CSV file hosted on Charty's servers.</p>
+                                <h6><strong>Add Series From CSV</strong></h6>
+                                <p>And here is where the magic happens 🎩!</p>
+                                <p>We set the contents of the URL as the CSV parameter, and use the magic variable Chart Id obtained from the Create Chart to define the chart that'll receive these series.</p>
+                                <p>Then, we define that the Date column will hold the X Values for both series. And the Y values will be obtained from two different columns: Min temp and Max temp.</p>
+                                <p>And that's it, as this CSV file uses the default column and floating point separator (, and . respectively), there's nothing left to setup.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>And here is the resulting chart.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/csv/charty_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/csv/charty_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <button type="button" class="btn btn-primary"><a class="text-white" href="https://www.icloud.com/shortcuts/accc7d03903441449a4d30b59928cbfc">Download the shortcut</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="assets/js/wow.min.js"></script> -->
+        <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="assets/js/waypoints.min.js"></script> -->
+        <script src="../assets/js/scripts.js"></script>
+    </body>
+</html>

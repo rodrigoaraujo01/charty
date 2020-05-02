@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h1>How to add custom labels to an axis</h1>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>It's possible to have custom labels on the x axis using the <strong>Style Axis</strong> action. In this tutorial, we'll be going through the steps necessary to create a bar chart of students grades with the name of each student in the x axis.</p>
+                        <p>In our hypothetical scenario, our professor has only 6 students named: Amanda, Brian, Charlie, Diana, Euron and Fiona. And they had the following grades on a scale of 0 through 10.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <picture>
+                            <source srcset="../assets/img/tutorials/custom_labels/students_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/custom_labels/students_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Students and their grades.</figcaption>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h5 class="mb-4">Processing the data</h5>
+                        <p>Our shortcut starts with the very basic: getting the data into Shortcuts and processing it.</p>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/text_input_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/text_input_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Input text actions.</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <p>I've added two <strong>Text</strong> actions to hold our data: one for the students names, and another one for the students' grades. In order to plot this as a series, we'll have to create x and y lists of numeric values, so Charty can get them and draw everything accordingly.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row text-left">
+                        <div class="col-12">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/text_input_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/text_input_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption mb-3">Input text actions.</figcaption>
+                            <p>I've added two <strong>Text</strong> actions to hold our data: one for the students names, and another one for the students' grades. In order to plot this as a series, we'll have to create x and y lists of numeric values, so Charty can get them and draw everything accordingly.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/repeat_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/repeat_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">X and Y Values variables.</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <p>To do that, we'll split the second text with a <strong>Split Text</strong> action, and we'll attach a <strong>Repeat With Each</strong> action to its result in order iterate over it.</p>
+                            <p>We'll have to create a list of numbers, with numbers to represent each student. This is necessary because (currently) Charty needs two lists of numbers to generate a bar chart.</p>
+                            <p>In this repeat loop, we'll add the <span class="text-orange"><strong>Repeat Index</strong></span> to a new <span class="text-orange"><strong>X Values</strong></span> variable, and the <span class="text-orange"><strong>Repeat Value</strong></span> (the current student's grade) to a <span class="text-orange"><strong>Y Values</strong></span> variable. When this loop ends, we'll have two nice lists of values, ready to be plotted.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row text-left">
+                        <div class="col-12">
+                            <p>To do that, we'll split the second text with a <strong>Split Text</strong> action, and we'll attach a <strong>Repeat With Each</strong> action to its result in order iterate over it.</p>
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/repeat_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/repeat_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption mb-3">X and Y Values variables.</figcaption>
+                            <p>We'll have to create a list of numbers, with numbers to represent each student. This is necessary because (currently) Charty needs two lists of numbers to generate a bar chart.</p>
+                            <p>In this repeat loop, we'll add the <span class="text-orange"><strong>Repeat Index</strong></span> to a new <span class="text-orange"><strong>X Values</strong></span> variable, and the <span class="text-orange"><strong>Repeat Value</strong></span> (the current student's grade) to a <span class="text-orange"><strong>Y Values</strong></span> variable. When this loop ends, we'll have two nice lists of values, ready to be plotted.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h5 class="mb-4">Adding the series to chart</h5>
+                        <p>We'll be using one of Charty's premium actions: <strong>New Chart With Series</strong>.</p>
+                        <p><em>You can unlock Charty Premium on the Settings view by tapping on Discover Charty Premium. It'll unlock 7 powerful new actions such as this one, and will also let you style all of your series and axes. You'll also get unlimited series per chart, 27 extra icons and the chance to participate on Charty's First Scavenger Hunt.</em></p>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/new_chart_with_series_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/new_chart_with_series_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Creating the chart and adding its first series</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <p>As you can see in the image, we're naming our chart "Student grades" and we're labeling our series "Grades". These are the values that'll appear above the chart and which will be used to reference the series in the legend, respectively.</p>
+                            <p>We've then set the series type to be Bar, and we're adding our variables <span class="text-orange"><strong>X Values</strong></span> and <span class="text-orange"><strong>Y Values</strong></span> as the plotting values.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row text-left">
+                        <div class="col-12">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/new_chart_with_series_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/new_chart_with_series_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption mb-3">Creating the chart and adding its first series</figcaption>
+                            <p>As you can see in the image, we're naming our chart "Student grades" and we're labeling our series "Grades". These are the values that'll appear above the chart and which will be used to reference the series in the legend, respectively.</p>
+                            <p>We've then set the series type to be Bar, and we're adding our variables <span class="text-orange"><strong>X Values</strong></span> and <span class="text-orange"><strong>Y Values</strong></span> as the plotting values.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>If we run our shortcut now, we'll see a simple bar chart with 6 bars. We're getting there, there's one step missing.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/custom_labels/intermission_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/custom_labels/intermission_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Simple bar chart</figcaption>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h5 class="mb-4">Enter the Style Axis action</h5>
+                        <p>We'll be using the <strong>Style Axis</strong> action to convert our x axis labels from numbers to names.</p>
+                        <p>In order to do this, we'll have to establish a correspondence between the numbers on the x axis and our names, this is done using two lists: the <span class="text-orange"><strong>X Values</strong></span> list we already have and a list of names.</p>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/split_text_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/split_text_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Splitting the students names' text into a list</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <p>On the first step of this tutorial, we created a text action with all of our students name. The easiest way to convert a text into a list is by using the <strong>Split Text</strong> action. This action reads the text than breaks into smaller parts based on a given character, which is, by default, the new line character.</p>
+                            <p>As our text action already had one student per line, when it's split based on the new line character, we'll get a nice list of the 6 students' names.</p>
+                        </div>
+                    </div>
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/style_axis_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/style_axis_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Styling our x axis</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <p>We're now ready to add a <strong>Style Axis</strong> to our shortcut.</p>
+                            <p>Start by setting which of the axes we want to style (X Axis in this case). If you add the <strong>Style Axis</strong> directly below the <strong>New Chart With Series</strong>, the Chart ID field will be automatically filled by Shortcuts. Then, set the Value formatter field to Custom and reveal the other parameters.</p>
+                            <p>There's a lot there, but we only need to set the Custom labels parameter to the output of that <strong>Split Text</strong> action we added after the students' names text and the Corresponding values to our <span class="text-orange"><strong>X Values</strong></span> variable.</p>
+                            <p>Just add an <strong>Open App</strong> to the end of the shortcut so we go straight to Charty after creating the chart, and hit that play button!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row text-left">
+                        <div class="col-12">
+                            <p>On the first step of this tutorial, we created a text action with all of our students name. The easiest way to convert a text into a list is by using the <strong>Split Text</strong> action. This action reads the text than breaks into smaller parts based on a given character, which is, by default, the new line character.</p>
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/split_text_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/split_text_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption mb-3">Splitting the students names' text into a list</figcaption>
+                            <p>As our text action already had one student per line, when it's split based on the new line character, we'll get a nice list of the 6 students' names.</p>
+                        </div>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-12">
+                            <p>We're now ready to add a <strong>Style Axis</strong> to our shortcut.</p>
+                            <p>Start by setting which of the axes we want to style (X Axis in this case). If you add the <strong>Style Axis</strong> directly below the <strong>New Chart With Series</strong>, the Chart ID field will be automatically filled by Shortcuts. Then, set the Value formatter field to Custom and reveal the other parameters.</p>
+                            <picture>
+                                <source srcset="../assets/img/tutorials/custom_labels/style_axis_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/tutorials/custom_labels/style_axis_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption mb-3">Styling our x axis</figcaption>
+                            <p>There's a lot there, but we only need to set the Custom labels parameter to the output of that <strong>Split Text</strong> action we added after the students' names text and the Corresponding values to our <span class="text-orange"><strong>X Values</strong></span> variable.</p>
+                            <p>Just add an <strong>Open App</strong> to the end of the shortcut so we go straight to Charty after creating the chart, and hit that play button!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>And here is the resulting chart.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/custom_labels/result_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/custom_labels/result_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <button type="button" class="btn btn-primary"><a class="text-white" href="https://www.icloud.com/shortcuts/0498845da33d49169db1b0f23ec57109">Download the shortcut</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="assets/js/wow.min.js"></script> -->
+        <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="assets/js/waypoints.min.js"></script> -->
+        <script src="../assets/js/scripts.js"></script>
+    </body>
+</html>

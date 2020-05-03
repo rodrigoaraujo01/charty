@@ -5,6 +5,18 @@
     --page-title: #555;
     --page-text: #555;
     --invert-control: 100%;
+    --empty-shortcut: #ECF1FB;
+    --shortcut-1: #E46367;
+    --shortcut-2: #E67359;
+    --shortcut-3: #DA7C3E;
+    --shortcut-4: #D3972C;
+    --shortcut-5: #69A34C;
+    --shortcut-6: #5D9AAD;
+    --shortcut-7: #698EC0;
+    --shortcut-8: #8E73BD;
+    --shortcut-9: #BE78C0;
+    --shortcut-10: #DB6F8D;
+    --shortcut-11: #938681;
 }
   
 @media screen and (prefers-color-scheme: dark) {
@@ -14,6 +26,18 @@
         --page-title: #fff;
         --page-text: #fff;
         --invert-control: 0%;
+        --empty-shortcut: #0D1B2D;
+        --shortcut-1: #E05259;
+        --shortcut-2: #EB694A;
+        --shortcut-3: #DF7A38;
+        --shortcut-4: #D7992C;
+        --shortcut-5: #619E43;
+        --shortcut-6: #5C9DB2;
+        --shortcut-7: #6890C6;
+        --shortcut-8: #8B68CE;
+        --shortcut-9: #C06BC4;
+        --shortcut-10: #E46D8E;
+        --shortcut-11: #867973;
     }
 }
 
@@ -119,13 +143,40 @@ h1, h2 {
     color: #FF9502;
 }
 .bg-shortcut-1 {
-    background-color: #D56C6B;
+    background-color: var(--shortcut-1);
 }
 .bg-shortcut-2 {
-    background-color: rgb(202, 124, 72);
+    background-color: var(--shortcut-2);
+}
+.bg-shortcut-3 {
+    background-color: var(--shortcut-3);
+}
+.bg-shortcut-4 {
+    background-color: var(--shortcut-4);
+}
+.bg-shortcut-5 {
+    background-color: var(--shortcut-5);
+}
+.bg-shortcut-6 {
+    background-color: var(--shortcut-6);
+}
+.bg-shortcut-7 {
+    background-color: var(--shortcut-7);
+}
+.bg-shortcut-8 {
+    background-color: var(--shortcut-8);
+}
+.bg-shortcut-9 {
+    background-color: var(--shortcut-9);
+}
+.bg-shortcut-10 {
+    background-color: var(--shortcut-10);
+}
+.bg-shortcut-11 {
+    background-color: var(--shortcut-11);
 }
 .bg-shortcut-empty {
-    background-color: #ECF1FB;
+    background-color: var(--empty-shortcut);
 }
 
 .section {

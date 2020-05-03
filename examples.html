@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140139432-2');
+        </script>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h1>Charty's examples</h1>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>Welcome to Charty's examples page!</p>
+                        <p>This is a running collection of both beginner and advanced shortcuts that use Charty and other apps to build great charts.</p>
+                        <p><a href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;"><strong>Get in touch</strong></a> if there's an example you'd like to see here or if you built something and would like to see it featured here!</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3>Index</h3>
+                        <ul>
+                            <li><a href="#healthkit">HealthKit integration</a></li>
+                            <li><a href="#notes">Using Notes as storage</a></li>
+                            <li><a href="#exporting">Exporting charts</a></li>
+                            <li><a href="#customization">Customizing charts</a></li>
+                            <li><a href="#api">Getting data from APIs</a></li>
+                            <li><a href="#apps">Getting data from apps</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="healthkit" class="section mt-1">HealthKit integration</h3>
+                    </div>
+                </div>
+                <div class="row text-left mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/fffcf0a64bc5434d9d03ebab5d312a91">
+                            <div class="card h-100 bg-shortcut-1">
+                                <!-- <picture>
+                                    <source srcset="assets/img/examples/achievement_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/examples/achievement_light.png" class="card-img-top" alt="">
+                                </picture> -->
+                                <div class="card-body">
+                                    <!-- <span class="badge badge-light" style="color: var(--shortcut-1)"> </span> -->
+                                    <h5 class="card-title text-white"><strong>Watch Calorie Achievement</strong></h5>
+                                    <p class="card-text text-white mb-0">Calculates a daily goal in order to beat Watch monthly calory goal and plots your actual progress towards the goal.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/990b967744e546bab04466117287072c">
+                            <div class="card h-100 bg-shortcut-1">
+                                <!-- <picture>
+                                    <source srcset="assets/img/examples/achievement_premium_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="assets/img/examples/achievement_premium_light.png" class="card-img-top" alt="">
+                                </picture> -->
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Watch Calorie Achievement Premium</strong></h5>
+                                    <p class="card-text text-white mb-0">Calculates a daily goal in order to beat Watch monthly calory goal and plots your actual progress towards the goal. Also displays the daily values as a bar chart, and adds titles to the axes.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-1)">Charty Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/6faa858570974626b66bdf646ebd1684">
+                            <div class="card h-100 bg-shortcut-2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Weights + Activity</strong></h5>
+                                    <p class="card-text text-white mb-0">Gets weight and activity data from Health and plots both datasets so you can see the effects your activities are having on your weight.</p>
+                                    <a href="https://toolboxpro.app"><span class="badge badge-light" style="color: var(--shortcut-2)">Requires Toolbox Pro</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/198bbac68e814d5d9e9ecab4aec00783">
+                            <div class="card h-100 bg-shortcut-2">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Weights + Activity Premium</strong></h5>
+                                    <p class="card-text text-white mb-0">Gets weight and activity data from Health and plots both datasets so you can see the effects your activities are having on your weight. Axes receive titles and series are styled for better visualization.</p>
+                                    <a href="https://toolboxpro.app"><span class="badge badge-light" style="color: var(--shortcut-2)">Requires Toolbox Pro</span></a>
+                                    <span class="badge badge-light" style="color: var(--shortcut-2)">Charty Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="notes" class="section mt-1">Using Notes as storage</h3>
+                    </div>
+                </div>
+                <div class="row text-left mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/3ac91d9a1771435ca37ee99656bba639">
+                            <div class="card h-100 bg-shortcut-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Log Book Progress</strong></h5>
+                                    <p class="card-text text-white mb-0">Asks for your progress on a given book and logs it to a Note.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/9a4d28e80183440a834912d8032f9fd6">
+                            <div class="card h-100 bg-shortcut-4">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Chart Book Progress</strong></h5>
+                                    <p class="card-text text-white mb-0">Reads the note created with Log Book Progress and creates a progress chart showing if you're above or below your desired pace.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="exporting" class="section mt-1">Exporting charts</h3>
+                    </div>
+                </div>
+                <div class="row text-left mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/efe43179eaf146a0acd62c1e356b666c">
+                            <div class="card h-100 bg-shortcut-5">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Save Selected Charts To Photos</strong></h5>
+                                    <p class="card-text text-white mb-0">Asks the user to select chart(s) and saves them as png files to the camera roll.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-5)">Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/fb4b543afe8b4b8a84229b3ba08791f9">
+                            <div class="card h-100 bg-shortcut-6">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Save Selected Charts To Dropbox</strong></h5>
+                                    <p class="card-text text-white mb-0">Asks the user to select chart(s) and saves them to the Public folder on Dropbox as png files.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-6)">Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="customization" class="section mt-1">Customizing charts</h3>
+                    </div>
+                </div>
+                <div class="row text-left mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/eec3992d07f1463da0d6f81e89e7cbef">
+                            <div class="card h-100 bg-shortcut-7">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Custom Color Themes</strong></h5>
+                                    <p class="card-text text-white mb-0">Uses the Style Bar Series premium action to create a stacked bar chart with a custom color theme.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-7)">Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/c3ac1262644c4eda87fa373d8f17be8a">
+                            <div class="card h-100 bg-shortcut-7">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Line Styling</strong></h5>
+                                    <p class="card-text text-white mb-0">Uses the Style Line Series premium action to create different styles line.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-7)">Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/b2e50fa2e7a9481483ff03e09ccf4fee">
+                            <div class="card h-100 bg-shortcut-7">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Scatter Styling</strong></h5>
+                                    <p class="card-text text-white mb-0">Uses the Style Scatter Series premium action to create scatter series with different marker styles.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-7)">Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="api" class="section mt-1">Getting data from APIs</h3>
+                    </div>
+                </div>
+                <div class="row text-left mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/8bdfa1201ebf41efb645f1151fdc4644">
+                            <div class="card h-100 bg-shortcut-8">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>COVID-19 Tracking</strong></h5>
+                                    <p class="card-text text-white mb-0">Queries an online API, processes the data and creates chart to track COVID-19 around the world. Only requires premium to select more than 2 countries.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-8)">Premium</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="apps" class="section mt-1">Getting data from apps</h3>
+                    </div>
+                </div>
+                <div class="row text-left mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/06e1f25ca62f4417ade1c81b07ec07e9">
+                            <div class="card h-100 bg-shortcut-9">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Omniweek</strong></h5>
+                                    <p class="card-text text-white mb-0">Gets the list of completed tasks from OmniFocus in the last week and creates a chart of tasks completed per day of the week.</p>
+                                    <a href="https://www.omnigroup.com/omnifocus/"><span class="badge badge-light" style="color: var(--shortcut-9)">Requires OmniFocus</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <a href="https://www.icloud.com/shortcuts/e308bfbce0064feaa49e134a6a30f99b">
+                            <div class="card h-100 bg-shortcut-9">
+                                <div class="card-body">
+                                    <h5 class="card-title text-white"><strong>Omniweek Premium</strong></h5>
+                                    <p class="card-text text-white mb-0">Gets the list of completed tasks from OmniFocus in the last week and creates a chart of tasks completed per day of the week. Also uses premium actions to customise the bars' colors and the X axis labels.</p>
+                                    <span class="badge badge-light" style="color: var(--shortcut-9)">Premium</span>
+                                    <a href="https://www.omnigroup.com/omnifocus/"><span class="badge badge-light" style="color: var(--shortcut-9)">Requires OmniFocus</span></a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-3.2.1.min.js"></script>
+        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="assets/js/wow.min.js"></script> -->
+        <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="assets/js/waypoints.min.js"></script> -->
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

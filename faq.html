@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140139432-2');
+        </script>
+
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,6 +53,9 @@
                             <a class="nav-link scroll-link" href="tutorials.html">Tutorials</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link scroll-link" href="examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link scroll-link" href="faq.html">FAQ</a>
                         </li>
                         <li class="nav-item">
@@ -78,29 +91,40 @@
                             <ul>
                                 <li><a href="#q11">What is Charty?</a></li>
                                 <li><a href="#q12">What is Shortcuts?</a></li>
-                                <li><a href="#q13">Are there other Shortcuts Utility Apps?</a></li>
-                                <li><a href="#q14">How much does Charty cost?</a></li>
-                                <li><a href="#q15">What kind of charts can I create with Charty?</a></li>
+                                <li><a href="#q13">I'm a total beginner, how do I use Charty?</a></li>
+                                <li><a href="#q14">Are there other Shortcuts Utility Apps?</a></li>
+                                <li><a href="#q15">How much does Charty cost?</a></li>
+                                <li><a href="#q16">What kind of charts can I create with Charty?</a></li>
                             </ul>
                             <li><a href="#shortcuts">Shortcuts</a></li>
                             <ul>
                                 <li><a href="#q21">What actions does Charty add to Shortcuts?</a></li>
                                 <li><a href="#q22">What's the simplest chart I can create with Charty?</a></li>
                                 <li><a href="#q23">What kind of data should I pass to Charty's values parameters?</a></li>
+                                <li><a href="#q24">Is there anywhere I can learn more about Charty's actions?</a></li>
+                                <li><a href="#q25">Where can I find example shortcuts to see what I can do with Charty?</a></li>
+                            </ul>
+                            <li><a href="#exporting">Exporting</a></li>
+                            <ul>
+                                <li><a href="#q31">Is it possible to export images of the charts?</a></li>
+                                <li><a href="#q32">What are export profiles?</a></li>
+                                <li><a href="#q33">How can I get to the export view from the app?</a></li>
+                                <li><a href="#q34">How do I use the Copy Chart To Clipboard action?</a></li>
+                                <li><a href="#q35">Shortcuts opens Charty when running the Copy Chart To Clipboard action. Is something wrong?</a></li>
                             </ul>
                             <li><a href="#data-sources">Data sources</a></li>
                             <ul>
-                                <li><a href="#q31">What Data Sources can I use with Charty?</a></li>
-                                <li><a href="#q32">Does Charty support data from HealthKit?</a></li>
-                                <li><a href="#q33">Why "almost any data"? Is something missing from HealthKit Shortcuts support?</a></li>
-                                <li><a href="#q34">What about APIs?</a></li>
-                                <li><a href="#q35">Does Charty support CSV files?</a></li>
+                                <li><a href="#q41">What Data Sources can I use with Charty?</a></li>
+                                <li><a href="#q42">Does Charty support data from HealthKit?</a></li>
+                                <li><a href="#q43">Why "almost any data"? Is something missing from HealthKit Shortcuts support?</a></li>
+                                <li><a href="#q44">What about APIs?</a></li>
+                                <li><a href="#q45">Does Charty support CSV files?</a></li>
                             </ul>
                             <li><a href="#customization">Customization</a></li>
                             <ul>
-                                <li><a href="#q41">Can I change the chart theme from Shortcuts?</a></li>
-                                <li><a href="#q42">Can I add custom color themes to Charty?</a></li>
-                                <li><a href="#q43">Can I add custom labels to an axis?</a></li>
+                                <li><a href="#q51">Can I change the chart theme from Shortcuts?</a></li>
+                                <li><a href="#q52">Can I add custom color themes to Charty?</a></li>
+                                <li><a href="#q53">Can I add custom labels to an axis?</a></li>
                             </ul>
                         </ul>
                     </div>
@@ -117,7 +141,21 @@
                         <p>Shortcuts is the tool to create automation workflows on iOS and iPadOS.</p>
                         <p>Quoting Apple: <em>Shortcuts includes over 300 built-in actions and works with many of your favorite apps including Contacts, Calendar, Maps, Music, Photos, Camera, Reminders, Safari, Health as well as any app that supports Siri Shortcuts.</em>.</p>
                         
-                        <h4 id="q13" class="section">Are there other Shortcuts Utility Apps?</h4>
+                        <h4 id="q13" class="section">I'm a total beginner, how do I use Charty?</h4>
+                        <p>You'll use Charty in the same way you'd create a chart or a graph on paper. On paper you would gather the information you want to use to make your chart; get some paper; draw some axes; plot your information; and finally share your creation.</p>
+                        <p>In a shortcut using Charty it’s exactly the same:</p>
+                        <ol>
+                            <li>Grab your data from a file, the clipboard, or a utility like <a href="https://datajar.app">Data Jar</a>, or just put some numbers together within your Shortcut;</li>
+                            <li>Create a chart using Charty’s <strong>New Chart</strong> action;</li>
+                            <li>Plot your information using the <strong>Add Series To Chart</strong> action;</li>
+                            <li>Ask Charty to put your new chart on the clipboard using <strong>Copy Chart To Clipboard</strong></li>
+                            <small><strong>Copy Chart To Clipboard</strong> is a Premium action. So, if you’re using the free version, you can see your chart in the app.</small>
+                            <li>Display the chart from within your shortcut, for example using Shortcuts’ <strong>Quick Look</strong> action;</li>
+                            <li>If you don’t want to keep your chart, you can throw it away using the <strong>Delete Chart</strong> action.</li>
+                        </ol>
+                        <p>And that’s it!</p>
+                        
+                        <h4 id="q14" class="section">Are there other Shortcuts Utility Apps?</h4>
                         <p>There are 5 other apps in this category besides Charty.</p>
                         <ul>
                             <li><a href="http://toolboxpro.app">Toolbox Pro</a></li>
@@ -127,8 +165,8 @@
                             <li><a href="http://datajar.app">Data Jar</a></li>
                         </ul>
                         
-                        <h4 id="q14" class="section">How much does Charty cost?</h4>
-                        <p>Charty is free to download with 4 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Chart</strong>.</p>
+                        <h4 id="q15" class="section">How much does Charty cost?</h4>
+                        <p>Charty is free to download with 4 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Charts</strong>.</p>
                         <p class="mb-0">A one-time in-app purchase unlocks:</p>
                         <ul>
                             <li>7 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong> and <strong>Style Scatter Series</strong></li>
@@ -137,9 +175,9 @@
                             <li>Unlimited series per chart</li>
                             <li>27+ extra icons</li>
                         </ul>
-                        <p>This in-app purchase will cost <strong>$2.99</strong> on the first month after release as a way to thank the support received from the community. After that, it'll be raised to <strong>$4.99</strong>.</p>
+                        <p>This in-app purchase will cost <strong>$2.99</strong> during the first month after release as a way to thank the support received from the community. After that, it'll be raised to <strong>$4.99</strong>.</p>
                         
-                        <h4 id="q15" class="section">What kind of charts can I create with Charty?</h4>
+                        <h4 id="q16" class="section">What kind of charts can I create with Charty?</h4>
                         <p>Using Charty, you can create 5 types of charts: Bar, Line, Scatter, Pie and Donut.</p>
                         <div class="row">
                             <div class="col-sm-4 col-6 mb-3">
@@ -223,7 +261,7 @@
                               </tr>
                               <tr>
                                 <td>Copy Chart To Clipboard</td>
-                                <td>Exports the chart with the given ID as an image using the provided export profile, and passes the resulting image to the clipboard</td>
+                                <td>Exports the chart with the given ID as an image using the provided export profile, and puts the resulting image to the clipboard</td>
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
                               <tr>
@@ -260,23 +298,91 @@
                         <h4 id="q23" class="section">What kind of data should I pass to Charty's values parameters?</h4>
                         <p>If you have data stored as text with one value per line and no headers, you can pass the text directly as X or Y values to Charty. But you'll usually be using repeat loops (either <strong>Repeat</strong> or <strong>Repeat With Each</strong>) combined with the <strong>Add To Variable</strong> action to create lists of values.</p>
                         <p>The first part of <a href="tutorials/custom_x_labels.html">this tutorial</a> details how you can use a repeat loop to create a list.</p>
+                        
+                        <h4 id="q24" class="section">Is there anywhere I can learn more about Charty's actions?</h4>
+                        <p>Inside the app, tap on the gear icon on the top right to go to the Settings view. In there, tap on Actions descriptions and you'll see a list of Charty's 11 actions. Tapping any of them will show you a detailed view of each actions parameters, outputs and miscellaneous information.</p>
+
+                        <h4 id="q25" class="section">Where can I find example shortcuts to see what I can do with Charty?</h4>
+                        <p>You can se 27 examples in the Examples' gallery inside the app just by tapping on the Examples button in the top left of the main view. You can also head to the <a href="examples.html">Examples</a> page here in the website to see a running list of more shortcuts!</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h3 id="exporting" class="section text-center my-4"><strong>Exporting</strong></h3>
+                        <h4 id="q31" class="section">Is it possible to export images of the charts?</h4>
+                        <p>Definitely! You can either do it using the <strong>Copy Chart To Clipboard</strong> action on your shortcut or you can do it directly on the app. Both of these ways use the export profiles to configure how the chart will be exported.</p>
+
+                        <h4 id="q32" class="section">What are export profiles?</h4>
+                        <p>Export profiles are bundles of settings that define how a chart should be exported, so you'll only have configure them once, and then export everything. These are the settings controlled by export profiles:</p>
+                        <ul>
+                            <li><strong>Appearance:</strong> defines wether your chart should use Light or Dark mode colors, or if you'd like to follow what's defined in the system at the moment;</li>
+                            <li><strong>Transparent background:</strong> wether you'd like to have a transparent background behind your chart;</li>
+                            <li><strong>Width and Height:</strong> the dimensions of the exported image in pixels;</li>
+                            <li><strong>Title font size:</strong> the font size (in points) of your chart title;</li>
+                            <li><strong>Chart font size:</strong> the font size (in points) to use for the chart's elements;</li>
+                            <li><strong>Thicken lines by:</strong> when images get bigger, lines that looked good in the app might need some thickening. Use this setting to make all the lines in the chart thicker;</li>
+                            <li><strong>Enlarge markers by:</strong> the same thing applies to markers. Use this setting to make all the markers in the chart larger.</li>
+                        </ul>
+                        
+                        <h4 id="q33" class="section">How can I get to the export view from the app?</h4>
+                        <p>There's two ways:</p>
+                        <ul>
+                            <li>Long press on any chart in the main view to display the context menu and then tap on Export chart;</li>
+                            <li>Select any of your charts from the main view, then tap on the share button on the top right corner.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-4"></div> 
+                    <div class="col-12 col-md-4">
+                        <picture>
+                            <source srcset="assets/img/faq/share_app_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/share_app_light.png" class="img-fluid rounded" alt="">
+                        </picture> 
+                        <figcaption class="text-center figure-caption mb-3">Share your chart from Charty</figcaption>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 id="q34" class="section">How do I use the Copy Chart To Clipboard action?</h4>
+                        <p>When you add the Copy Chart To Clipboard action, you'll need to provide the ID of the chart you're trying to export and an export profile. If you choose the default profile or any other profile you've created, you're done. There's no need to fiddle with the other parameters as Charty will get all the required information from the profiles.</p>
+                        <p>But if you choose the Create new export profile option, you should modify at least one of the other parameters, otherwise, it'll be exported with the default values that are identical to the Default export profile.</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-4"></div> 
+                    <div class="col-12 col-md-4">
+                        <picture>
+                            <source srcset="assets/img/faq/copy_chart_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/copy_chart_light.png" class="img-fluid rounded" alt="">
+                        </picture> 
+                        <figcaption class="text-center figure-caption mb-3">Copy Chart To Clipboard action</figcaption>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 id="q35" class="section">Shortcuts opens Charty when running the Copy Chart To Clipboard action. Is something wrong?</h4>
+                        <p>There isn't! Due to memory and UI constraints, Charty needs to be opened in order to export a chart as an image. The best you can do is add a <strong>Wait to Return</strong> action after the <strong>Copy Chart To Clipboard</strong> action. This way, you'll guarantee Shortcuts waits for Charty to give back control before going to the next action.<p>
                     </div>
                 </div>
                 <div class="row text-left">
                     <div class="col-0 col-md-2"></div> 
                     <div class="col-12 col-md-8">
                         <h3 id="data-sources" class="section text-center my-4"><strong>Data sources</strong></h3>
-                        <h4 id="q31" class="section">What Data Sources can I use with Charty?</h4>
+                        <h4 id="q41" class="section">What Data Sources can I use with Charty?</h4>
                         <p>Virtually, any data source that provides Shortcuts support can be used with Charty.</p>
                         <p>For example, if you store data in text notes inside the Notes app, you can extract them using the <strong>Find Notes</strong> action. You can then process it with Shortcuts and plot it with Charty.</p>
 
-                        <h4 id="q32" class="section">Does Charty support data from HealthKit?</h4>
-                        <p>Of course! It's not widely know, but HealthKit has great Shortcuts support. You can use the <strong>Find Health Samples</strong> action to get almost any data from HealthKit. You can then process it with Shortcuts and plot it with Charty.</p>
+                        <h4 id="q42" class="section">Does Charty support data from HealthKit?</h4>
+                        <p>Of course! It's not widely known, but HealthKit has great Shortcuts support. You can use the <strong>Find Health Samples</strong> action to get almost any data from HealthKit. You can then process it with Shortcuts and plot it with Charty.</p>
                         
-                        <h4 id="q33" class="section">Why "almost any data"? Is something missing from HealthKit Shortcuts support?</h4>
+                        <h4 id="q43" class="section">Why "almost any data"? Is something missing from HealthKit Shortcuts support?</h4>
                         <p>Unfortunately, yes. You can't extract Workouts and Activity data with Health's default actions. But, if you buy <a href="https://toolbox.pro">Toolbox Pro</a> premium package, you'll get the premium actions <strong>Get Activity</strong> and <strong>Get Workouts</strong> that solve this problem.</p>
 
-                        <h4 id="q34" class="section">What about APIs?</h4>
+                        <h4 id="q44" class="section">What about APIs?</h4>
                         <p>API data can also be extracted and plotted with Charty. You can use the <strong>Get Contents of URL</strong> action to make a request to the API. You can then process it with Shortcuts and plot it with Charty.</p>
                         <p>Here's an <a href="">example</a> that queries a <a href="https://github.com/pomber/covid19">COVID-19 tracking API</a> and creates charts such as the one below using Charty.</p>
                     </div>
@@ -294,7 +400,7 @@
                 <div class="row text-left">
                     <div class="col-0 col-md-2"></div> 
                     <div class="col-12 col-md-8">
-                        <h4 id="q35" class="section">Does Charty support CSV files?</h4>
+                        <h4 id="q45" class="section">Does Charty support CSV files?</h4>
                         <p>Charty's Premium version has great support for CSV files through the <strong>Add Series From CSV</strong> action. With it, you can select which of the CSV file's columns should be used as x values and which should be used as y values. If you want more information about this action, you can check the tutorial <a href="tutorials/csv.html">How to plot data from a CSV file</a>.</p>
                     </div>
                 </div>
@@ -303,10 +409,10 @@
                     <div class="col-12 col-md-8">
                         <h3 id="customization" class="section text-center my-4"><strong>Customization</strong></h3>
 
-                        <h4 id="q41" class="section">Can I change the chart theme from Shortcuts?</h4>
+                        <h4 id="q51" class="section">Can I change the chart theme from Shortcuts?</h4>
                         <p>Currently, you can't modify a given chart's theme directly from a shortcut. As a workaround, you can modify the default theme with which your charts are created from the Default values view in Charty's Settings.</p>
                         
-                        <h4 id="q42" class="section">Can I add custom color themes to Charty?</h4>
+                        <h4 id="q52" class="section">Can I add custom color themes to Charty?</h4>
                         <p>Currently, Charty doesn't have a way to create custom color themes in the app. As a workaround, you can use a text action to store your custom theme colors and then use one of the 3 <strong>Style Series</strong> actions to change the color of the series accordingly.</p>
                     </div>
                 </div>
@@ -339,7 +445,7 @@
                 <div class="row text-left">
                     <div class="col-0 col-md-2"></div> 
                     <div class="col-12 col-md-8">
-                        <h4 id="q43" class="section">Can I add custom labels to an axis?</h4>
+                        <h4 id="q53" class="section">Can I add custom labels to an axis?</h4>
                         <p>Using Charty's premium action <strong>Style Axis</strong> you can modify the value formatter for all axes. So you can set it to a custom formatter, passing a list of labels and their corresponding custom labels. You can check the tutorial <a href="tutorials/custom_x_labels.html">How to add custom labels to an axis</a> for more information about this action.</p>
                     </div>
                 </div>

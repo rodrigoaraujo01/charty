@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140139432-2');
+        </script>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="charty11iris.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../themes.html">Themes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <small><em>June 4, 2020</em></small>
+                        <h1>Charty 1.1 – Iris</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p class="text-left">Today marks the release of Charty's first major update: 1.1 – Iris.</p>
+                        <h4 class="text-center mb-4">Colorful as the rainbow</h4>
+                        <p class="text-left">This update adds a very requested feature to Charty: <strong>custom themes</strong>.</p>
+                        <p class="text-left">It's now possible to add custom color sequences to use with any of your charts using one of three different ways: shortcuts, files and url-schemes.</p>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/custom_theme_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/custom_theme_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Add custom theme action</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <h6><strong>Shortcuts</strong></h6>
+                            <p>You can use the new <strong>Add Custom Theme</strong> action to add a list of colors (represented as hexadecimal codes) as a new custom theme.</p>
+                            <p>As in the style actions, colors can be passed with 3, 6 or 8 characters:</p>
+                            <ul>
+                                <li>3 characters: RGB</li>
+                                <li>6 characters: RRGGBB</li>
+                                <li>8 characters: AARRGGBB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="text-left"><strong>Shortcuts</strong></h6>
+                            <p class="text-left">You can use the new <strong>Add Custom Theme</strong> action to add a list of colors (represented as hexadecimal codes) as a new custom theme.</p>
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/custom_theme_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/custom_theme_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Add custom theme action</figcaption>
+                            <p class="text-left">As in the style actions, colors can be passed with 3, 6 or 8 characters:</p>
+                            <ul class="text-left">
+                                <li>3 characters: RGB</li>
+                                <li>6 characters: RRGGBB</li>
+                                <li>8 characters: AARRGGBB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h6><strong>Files</strong></h6>
+                        <p>In the theme selection view, there's a new + icon in the top right corner. Tapping it, will open the iOS file selector, where you'll be able to choose a text file containing a list of colors (represented as hexadecimal codes).</p>
+                        <h6><strong>url-schemes</strong></h6>
+                        <p>Lastly, you can use the url-scheme below.</p>
+                        <span>charty://add-theme?name=<span class="text-green">BlGrYeOrRe</span></span>
+                        <span>&baseColors=<span class="text-orange">0</span></span>
+                        <p>&colors=<span class="text-blue">1a76e8,28d475,ffd416,ff6f1d,eb2d40</span></p>
+                        <p>The <span class="text-green">green</span> part is the theme's name, in <span class="text-blue">blue</span> is a list of colors (represented as hexadecimal codes) separated by commas. Lastly, in <span class="text-orange">orange</span>, is the color selection strategy to use. Accepted values are 0, 3 and 4, and this is useful for gradient themes, to ensure color differentiation when charts have only a few series.</p>
+                        <p>There's a new <a href="../themes.html>">Themes</a> page in this website with 28 extra themes. Using this url-scheme, adding a new theme is just a tap away. Here are some examples:</p>
+                    </div>
+                </div>
+                <div class="row text-left">
+                    <div class="col-sm-4 mb-4">
+                        <a href="charty://add-theme?name=Charty&baseColors=3&colors=ff2e55,ed3364,da3772,c73b80,b43f8e,a2449d,8f48ab,7d4dba,6b52c9,5856d7">
+                            <p class="text-center"><strong>Charty</strong></p>
+                            <img src="../assets/img/themes/Charty.png" class="img-fluid rounded" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 mb-4">
+                        <a href="charty://add-theme?name=MikeWasRight&baseColors=0&colors=3437c0,1a76e8,20a5ae,28d475,92d445,ffd416,ffa119,f54e2e,eb2d40,d90047">
+                            <p class="text-center"><strong>MikeWasRight</strong></p>
+                            <img src="../assets/img/themes/MikeWasRight.png" class="img-fluid rounded" alt="">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 mb-4">
+                        <a href="charty://add-theme?name=YeGrBl&baseColors=3&colors=e6e645,c1de43,9ad540,72cc3e,4cc33c,38bc4e,35b673,33b099,30aac0,2ea4e5">
+                            <p class="text-center"><strong>YeGrBl</strong></p>
+                            <img src="../assets/img/themes/YeGrBl.png" class="img-fluid rounded" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 class="text-center mb-4">The rise of utility actions</h4>
+                        <p>In addition to the already cited Add Custom Theme, Charty 1.1 adds 5 other actions:</p>
+                        <ul>
+                            <li>Add Average</li>
+                            <li>Add Moving Average</li>
+                            <li>Apply Quick Style</li>
+                            <li>Style Chart</li>
+                            <li>Style Donut/Pie Series</li>
+                        </ul>
+                        <p>The first three actions are part of a new category of actions in Charty: <strong>utility actions</strong>. The idea here is to condensate into a single action things that were already possible with long lists of other actions in Shortcuts, making everything cleaner and clearer.</p>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/chart_averages_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/chart_averages_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Add Average action</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <h6><strong>Add Average</strong></h6>
+                            <p>This new action calculates the average of a series' values in the selected period, which might all values and just a subsection of it. This average is then added as a new series and all of its styling can be done directly in the action.</p>
+                            <p>In the example to the left, you can see the Add Average action being used 4 times to calculate averages of the user's energy spent in four different weeks.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="text-left"><strong>Add Average</strong></h6>
+                            <p class="text-left">This new action calculates the average of a series' values in the selected period, which might all values and just a subsection of it. This average is then added as a new series and all of its styling can be done directly in the action.</p>
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/chart_averages_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/chart_averages_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Add Average action</figcaption>
+                            <p class="text-left">In the example above, you can see the Add Average action being used 4 times to calculate averages of the user's energy spent in four different weeks.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/chart_moving_averages_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/chart_moving_averages_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Add Moving Average action</figcaption>
+                        </div> 
+                        <div class="col-6">
+                            <h6><strong>Add Moving Average</strong></h6>
+                            <p>Much like the <strong>Add Average</strong> action, but this one uses a moving window. Moving averages are commonly used to remove high frequency noise from data, leaving only the macro tendencies. The new series style is completely adjustable directly from this action.</p>
+                            <p>You can also select the centering strategy for the averaging window, as shown in this example where this action was used to add 3 different moving averages with left, center and right centered windows.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="text-left"><strong>Add Moving Average</strong></h6>
+                            <p class="text-left">Much like the <strong>Add Average</strong> action, but this one uses a moving window. Moving averages are commonly used to remove high frequency noise from data, leaving only the macro tendencies. The new series style is completely adjustable directly from this action.</p>
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/chart_moving_averages_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/chart_moving_averages_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Add Moving Average action</figcaption>
+                            <p class="text-left">You can also select the centering strategy for the averaging window, as shown in this example where this action was used to add 3 different moving averages with left, center and right centered windows.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- DESKTOP -->
+                <div class="d-none d-md-block">
+                    <div class="row text-left mt-4">
+                        <div class="col-12">
+                            <h6 class="text-center"><strong>Apply Quick Style</strong></h6>
+                            <p class="text-center">This action condensates 3 different actions into one: Highlight series, Stack all bars and Modify markers.</p>
+                        </div>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-4">
+                            <h6><strong>Highlight series</strong></h6>
+                            <p>Use this option to dampen or recolor secondary series, highlighting one or more important series.</p>
+                        </div>
+                        <div class="col-4">
+                            <h6><strong>Stack all bars</strong></h6>
+                            <p>Use this option to stackk all bar series in a chart into a single stack, instead of applying Style Bar Series to each bar series.</p>
+                        </div>
+                        <div class="col-4">
+                            <h6><strong>Modify markers</strong></h6>
+                            <p>Don't like chevron markers? Use this option to select which markers can be used for your scatter series.</p>
+                        </div>
+                    </div>
+                    <div class="row text-left">
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/action_apply_quick_style_highlight_series_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/action_apply_quick_style_highlight_series_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Highlight series</figcaption>
+                        </div>
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/action_apply_quick_style_stack_bars_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/action_apply_quick_style_stack_bars_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Stack all bars</figcaption>
+                        </div>
+                        <div class="col-4">
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/action_apply_quick_style_modify_markers_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/action_apply_quick_style_modify_markers_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Modify markers</figcaption>
+                        </div>
+                    </div>
+                </div>
+                <!-- MOBILE -->
+                <div class="d-md-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6 class="text-left"><strong>Apply Quick Style</strong></h6>
+                            <p class="text-left">This action condensates 3 different actions into one: Highlight series, Stack all bars and Modify markers.</p>
+                            <h6 class="text-left"><strong>Highlight series</strong></h6>
+                            <p class="text-left">Use this option to dampen or recolor secondary series, highlighting one or more important series.</p>
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/action_apply_quick_style_highlight_series_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/action_apply_quick_style_highlight_series_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Highlight series</figcaption>
+                            <h6 class="text-left"><strong>Stack all bars</strong></h6>
+                            <p class="text-left">Use this option to stackk all bar series in a chart into a single stack, instead of applying Style Bar Series to each bar series.</p>
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/action_apply_quick_style_stack_bars_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/action_apply_quick_style_stack_bars_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Stack all bars</figcaption>
+                            <h6 class="text-left"><strong>Modify markers</strong></h6>
+                            <p class="text-left">Don't like chevron markers? Use this option to select which markers can be used for your scatter series.</p>
+                            <picture>
+                                <source srcset="../assets/img/blog/update11iris/action_apply_quick_style_modify_markers_dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="../assets/img/blog/update11iris/action_apply_quick_style_modify_markers_light.png" class="img-fluid rounded" width="400" alt="">
+                            </picture>
+                            <figcaption class="text-center figure-caption">Modify markers</figcaption>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h6><strong>Style Chart and Style Donut/Pie Series</strong></h6>
+                        <p>With these two new actions, everything in a chart can be configured through shortcuts.</p>
+                        <p>With <strong>Style Chart</strong> you can modify a chart's theme, toggle and change the color of the border and grid of a chart, and also change legend, values and labels position.</p>
+                        <p><strong>Style Donut/Pie Series</strong> makes it possible to modify a donut or pie chart colors either based on its labels, or using a sequential list of colors.</p>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 class="text-center mb-4">Search and you shall find</h4>
+                        <picture>
+                        <source srcset="../assets/img/blog/update11iris/search_bar_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/blog/update11iris/search_bar_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Search and filters</figcaption>
+                        <p class="text-left">The main chart list now has a <strong>search bar</strong>, and when it's activated, series filters are shown. This will search any part of the charts' titles, and filter any of the series types they contain.</p>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 class="text-center mb-4">Wait, there's more</h4>
+                        <p>This update removes the necessity to fill the x values parameter when adding bar, line and scatter series. Now, whenever Charty sees a series with this empty parameter, it assumes data is sequential and starts at 1.</p>
+                        <p>For donut and pie charts, in a likewise manner, the values parameter is also now optional. If this happens, Charty gets the labels list and counts the number of each unique label, using this count as the value.</p>
+                        <p>Lastly, 7 new examples have been added showcasing Health data export, using the new utility actions and how to export charts using Shortcuts. Here's the new list:</p>
+                        <ul>
+                            <li><a href="https://www.icloud.com/shortcuts/1d0af9492bb745dc8d9cb6cf8a7fe371">Caffeine intake</a></li>
+                            <li><a href="https://www.icloud.com/shortcuts/1bf8673f8e5c4093a1f570ebecdc4c9e">Weight chart</a></li>
+                            <li><a href="https://www.icloud.com/shortcuts/75945f0658ee40a0935337eea9343a47">Weight chart premium</a></li>
+                            <li><a href="https://www.icloud.com/shortcuts/de721a7626d5432dbb313d919db8d96d">Nutrition charts premium</a></li>
+                            <li><a href="https://www.icloud.com/shortcuts/9b8401b010814460b8f33b0a667ce252">Weather forecast premium</a></li>
+                            <li><a href="https://www.icloud.com/shortcuts/264fab4a0eee43c68a7cca4fef8add79">Save Selected Charts To Photos Premium</a></li>
+                            <li><a href="https://www.icloud.com/shortcuts/4fb0cac2afb64d418e4c7df59c0b9db1">Moving Averages Example Premium</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-4 text-left">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <h4 class="mb-4 text-center">The codename</h4>
+                        <p>Woah, congratulation on reaching the end of this long post 🙂</p>
+                        <p>I've always loved project codenames. I remember fondly when the Xbox Kinect was called <a href="https://www.engadget.com/2009-06-03-project-natal-video-hands-on-impressions-and-further-details.html">Project Natal</a> (the name of my hometown) and always thought <a href="https://9to5mac.com/guides/project-titan/">Project Titan</a> was a great name that conveyed the hardship of building an autonomous vehicle.</p>
+                        <p>So I've temporarily decided to use greek mythology to name Charty's major updates, unifying too long time passions: mythology and coding.</p>
+                        <p><a href="https://en.wikipedia.org/wiki/Iris_(mythology)">Iris</a> was the greek goddess and personification of the rainbow, so it was an easy choice for an update adding so much color to the app.</p>
+                        <p>It's time to work on Charty 1.2, which will either be Hephaestus or Pandora, you'll have to wait and see!.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="../assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="../assets/js/wow.min.js"></script> -->
+        <!-- <script src="../assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="../assets/js/waypoints.min.js"></script> -->
+        <script src="../assets/js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140139432-2');
+        </script>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="apple-itunes-app" content="app-id=1494386093">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- META -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@chartyios"/>
+        <meta name="twitter:creator" content="@rodrigoaraujo"/>
+        <meta property="og:url" content="https://chartyios.app/tutorials/combine_charts.html"/>
+        <meta property="og:title" content="Combining charts for richer visualizations"/>
+        <meta property="og:description" content="How to use Shortcuts Combine Images to create rich visualizations."/>
+        <meta property="og:image" content="../assets/img/og/og_combine.png"/>
+        
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../themes.html">Themes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <small><em>June 16, 2020</em></small>
+                        <h1>Combining charts for richer visualizations</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p class="text-left">This post will show how you can use the <strong>Combine images</strong> action to create richer charts.</p>
+                        <h4 class="text-center">The combine images action</h4>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/3_combine/combine_action_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/3_combine/combine_action_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Combine images action</figcaption>
+                        <p class="text-left">In a nutshell, this action combines a list of images (to learn more about lists in Shortcuts, check <a href="https://www.youtube.com/watch?v=f2mNbZOkUVk">this video</a>) using one of three strategies: horizontally, vertically or in a grid.</p>
+                        <p class="text-left">The horizontal option creates a new image by joining the input list of images side by side.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/3_combine/horizontally_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/3_combine/horizontally_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Combining images 1 through 4 horizontally</figcaption>
+                        <p class="text-left">Vertically has a similar effect, but on the y axis.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/3_combine/vertically_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/3_combine/vertically_light.png" class="img-fluid rounded" width="200" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Combining images 1 through 4 vertically</figcaption>
+                        <p class="text-left">The grid option uses some heuristics to infer the best lines and columns combination. Here are some examples:</p>
+                        <ul class="text-left">
+                            <li>4 images become a 2x2 grid;</li>
+                            <li>6 images become a 2x3 grid;</li>
+                            <li>5 images become a 2x3 grid with the last spot empty;</li>
+                        </ul>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/3_combine/grid_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/3_combine/grid_light.png" class="img-fluid rounded" width="250" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Combining images 1 through 4 in a grid</figcaption>
+
+                        <h4 class="text-center mt-4">Mixed strategies</h4>
+                        <p class="text-left">Grids are very interesting, but the real power comes from using multiple combine actions to achieve powerful results.</p>
+                        <p class="text-left">Imagine we have a main chart with data from 3 sources, and we'd like to also present each dataset individually. It'd make sense to show the first chart bigger, while also displaying smaller views for each dataset, like the image below.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/3_combine/mixed_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/3_combine/mixed_light.png" class="img-fluid rounded" width="250" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Main chart + small detail charts</figcaption>
+                        <p class="text-left">This can be easily achieved using three steps:</p>
+                        <ol class="text-left">
+                            <li>Combine the smaller charts <strong>horizontally</strong>;</li>
+                            <li>Enlarge chart #1 so it's 3 times as wide as the others;</li>
+                            <li>Combine the enlarged chart #1 with the result of step 1 <strong>vertically</strong>.</li>
+                        </ol>
+
+                        <h4 class="text-center mt-4">Real world example</h4>
+                        <p class="text-left">As real world application of this technique, here's an example that uses a <a href="https://pomber.github.io/covid19/timeseries.json">COVID-19 API</a> to calculate daily new COVID cases for three different countries: Brazil, US and Italy.</p>
+                        <p class="text-left">The first chart shows daily data for all countries, while the smaller charts display each country's data, with an added moving average.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/3_combine/real_example_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/3_combine/real_example_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Main chart + small detail charts</figcaption>
+
+                        <div class="row mt-4">
+                            <div class="col-0 col-md-2"></div> 
+                            <div class="col-12 col-md-8">
+                                <button type="button" class="btn btn-primary"><a class="text-white" href="https://www.icloud.com/shortcuts/5c55a6f7077d4783a8f02baa0fc8cd71">Download the shortcut</a></button>
+                            </div>
+                        </div>
+            
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="../assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="../assets/js/wow.min.js"></script> -->
+        <!-- <script src="../assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="../assets/js/waypoints.min.js"></script> -->
+        <script src="../assets/js/scripts.js"></script>
+    </body>
+</html>

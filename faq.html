@@ -176,13 +176,14 @@
                         <p>Charty is free to download with 4 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Charts</strong>.</p>
                         <p class="mb-0">A one-time in-app purchase unlocks:</p>
                         <ul>
-                            <li>7 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong> and <strong>Style Scatter Series</strong></li>
+                            <li>12 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong>, <strong>Style Pie/Donut Series</strong>, <strong>Style Scatter Series</strong>, <strong>Add Average</strong>, <strong>Add Moving Average</strong>, <strong>Apply Quick Style</strong> and <strong>Add Custom Theme</strong></li>
                             <li>Series styling and customisation (line width, stacked bars, markers size, series' colors, etc)</li>
                             <li>Axis styling and label customisation (date time format, custom labels, etc)</li>
+                            <li><a href="https://chartyios.app/themes.html">Custom themes</a></li>
                             <li>Unlimited series per chart</li>
-                            <li>27+ extra icons</li>
+                            <li>31+ extra icons</li>
                         </ul>
-                        <p>This in-app purchase will cost <strong>$2.99</strong> during the first month after release as a way to thank the support received from the community. After that, it'll be raised to <strong>$4.99</strong>.</p>
+                        <p>This in-app purchase costs <strong>$4.99</strong>.</p>
                         
                         <h4 id="q16" class="section">What kind of charts can I create with Charty?</h4>
                         <p>Using Charty, you can create 5 types of charts: Bar, Line, Scatter, Pie and Donut.</p>
@@ -231,7 +232,7 @@
                     <div class="col-12 col-md-8">
                         <h3 id="shortcuts" class="section text-center my-4"><strong>Shortcuts</strong></h3>
                         <h4 id="q21" class="section">What actions does Charty add to Shortcuts?</h4>
-                        <p>Charty adds 11 powerful new actions to Shortcuts:</p>
+                        <p>Charty adds 17 powerful new actions to Shortcuts:</p>
                         <table class="table">
                             <thead>
                               <tr>
@@ -262,6 +263,11 @@
                                 <td class="text-success"><strong>Free</strong></td>
                               </tr>
                               <tr>
+                                <td>Style Chart</td>
+                                <td>Modifies the attributes of a given chart</td>
+                                <td class="text-success"><strong>Free</strong></td>
+                              </tr>
+                              <tr>
                                 <td>New Chart With Series</td>
                                 <td>Creates a new chart and adds a new series to it</td>
                                 <td class="text-orange"><strong>Premium</strong></td>
@@ -274,6 +280,11 @@
                               <tr>
                                 <td>Add Series From CSV</td>
                                 <td>Adds new series from a CSV file</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Add Custom Theme</td>
+                                <td>Adds the passed colors as a new theme</td>
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
                               <tr>
@@ -292,8 +303,28 @@
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
                               <tr>
+                                <td>Style Pie/Donut Series</td>
+                                <td>Modifies the attributes of a given pie or donut series</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
                                 <td>Style Scatter Series</td>
                                 <td>Modifies the attributes of a given scatter series</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Add Average</td>
+                                <td>Adds a new series based on the average of other selected series</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Add Moving Average</td>
+                                <td>Adds a moving average series based on the selected series values</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Apply Quick Style</td>
+                                <td>Applies a quick style to the selected chart and series</td>
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
                             </tbody>
@@ -417,10 +448,12 @@
                         <h3 id="customization" class="section text-center my-4"><strong>Customization</strong></h3>
 
                         <h4 id="q51" class="section">Can I change the chart theme from Shortcuts?</h4>
-                        <p>Currently, you can't modify a given chart's theme directly from a shortcut. As a workaround, you can modify the default theme with which your charts are created from the Default values view in Charty's Settings.</p>
+                        <p>Yes! Just use the free action <strong>Style Chart</strong> and select which theme you'd like. If you find yourself always going for the same theme, you can modify the default theme with which your charts are created from the Default values view in Charty's Settings.</p>
                         
                         <h4 id="q52" class="section">Can I add custom color themes to Charty?</h4>
-                        <p>Currently, Charty doesn't have a way to create custom color themes in the app. As a workaround, you can use a text action to store your custom theme colors and then use one of the 3 <strong>Style Series</strong> actions to change the color of the series accordingly.</p>
+                        <p>Yes, and it can be done in one of three ways: using the <strong>Add Custom Theme action</strong>, importing a file with your color list or using Charty's url-scheme. If you want to know more about this, <a href="https://chartyios.app/blog/charty11iris.html">this post</a> describes everything in detailm, but if you only want a giant list of new themes, head on to <a href="https://chartyios.app/themes.html">Charty's theme section</a>!</p>
+                        <h4 id="q53" class="section">Can I use a custom palette without adding a theme?</h4>
+                        <p>Yes. If you don't want to add a custom theme, you can use a text action to store your custom theme colors and then use one of the <strong>Style Series</strong> actions to change the color of the series accordingly.</p>
                     </div>
                 </div>
                 <div class="row text-left">
@@ -436,7 +469,7 @@
                 <div class="row text-left">
                     <div class="col-0 col-md-2"></div> 
                     <div class="col-12 col-md-8">
-                        <p>You can download <a href="https://www.icloud.com/shortcuts/1f6ed417ffb74167bcf85009b5904caf">this shortcut example</a> that uses the above custom theme to create the following chart.</p>
+                        <p>You can download <a href="https://www.icloud.com/shortcuts/1f6ed417ffb74167bcf85009b5904caf">this shortcut example</a> that uses the above custom palette to create the following chart.</p>
                     </div>
                 </div>
                 <div class="row text-left">

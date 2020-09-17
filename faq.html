@@ -116,7 +116,7 @@
                                 <li><a href="#q31">Is it possible to export images of the charts?</a></li>
                                 <li><a href="#q32">What are export profiles?</a></li>
                                 <li><a href="#q33">How can I get to the export view from the app?</a></li>
-                                <li><a href="#q34">How do I use the Copy Chart To Clipboard action?</a></li>
+                                <li><a href="#q34">How do I use the Export Chart As Image action?</a></li>
                                 <li><a href="#q35">Shortcuts opens Charty when running the Copy Chart To Clipboard action. Is something wrong?</a></li>
                             </ul>
                             <li><a href="#data-sources">Data sources</a></li>
@@ -173,10 +173,10 @@
                         </ul>
                         
                         <h4 id="q15" class="section">How much does Charty cost?</h4>
-                        <p>Charty is free to download with 4 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Charts</strong>.</p>
+                        <p>Charty is free to download with iOS 14 Widgets support and 5 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Style Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Chart</strong>.</p>
                         <p class="mb-0">A one-time in-app purchase unlocks:</p>
                         <ul>
-                            <li>12 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong>, <strong>Style Pie/Donut Series</strong>, <strong>Style Scatter Series</strong>, <strong>Add Average</strong>, <strong>Add Moving Average</strong>, <strong>Apply Quick Style</strong> and <strong>Add Custom Theme</strong></li>
+                            <li>17 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Export Chart As Image</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong>, <strong>Style Pie/Donut Series</strong>, <strong>Style Scatter Series</strong>, <strong>Add Average</strong>, <strong>Add Moving Average</strong>, <strong>Apply Quick Style</strong>, <strong>Add Custom Theme</strong>, <strong>Group Data</strong>, <strong>Filter Data</strong>, <strong>Accumulate Values</strong> and <strong>Update Widgets</strong></li>
                             <li>Series styling and customisation (line width, stacked bars, markers size, series' colors, etc)</li>
                             <li>Axis styling and label customisation (date time format, custom labels, etc)</li>
                             <li><a href="https://chartyios.app/themes.html">Custom themes</a></li>
@@ -184,7 +184,7 @@
                             <li>31+ extra icons</li>
                         </ul>
                         <p>This in-app purchase costs <strong>$4.99</strong>.</p>
-                        
+
                         <h4 id="q16" class="section">What kind of charts can I create with Charty?</h4>
                         <p>Using Charty, you can create 5 types of charts: Bar, Line, Scatter, Pie and Donut.</p>
                         <div class="row">
@@ -273,8 +273,16 @@
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
                               <tr>
+                                <td>Export Chart As Image</td>
+                                <td>Exports the chart with the given ID as an image using the provided export profile directly in Shortcuts.</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
                                 <td>Copy Chart To Clipboard</td>
-                                <td>Exports the chart with the given ID as an image using the provided export profile, and puts the resulting image to the clipboard</td>
+                                <td>
+                                    Exports the chart with the given ID as an image using the provided export profile, and puts the resulting image to the clipboard<br>
+                                    <em>This action will be deprecated in the next version</em>
+                                </td>
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
                               <tr>
@@ -327,6 +335,26 @@
                                 <td>Applies a quick style to the selected chart and series</td>
                                 <td class="text-orange"><strong>Premium</strong></td>
                               </tr>
+                              <tr>
+                                <td>Group Data</td>
+                                <td>Groups the selected x and y lists based on a specific criteria</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Filter Data</td>
+                                <td>Filters the selected x and y lists based on values from a parameters list</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Accumulate Values</td>
+                                <td>Creates a new accumulated sum list based on an input list</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
+                              <tr>
+                                <td>Update Widgets</td>
+                                <td>Updates the selected chart's widgets if any are found</td>
+                                <td class="text-orange"><strong>Premium</strong></td>
+                              </tr>
                             </tbody>
                         </table>
 
@@ -341,7 +369,7 @@
                         <p>Inside the app, tap on the gear icon on the top right to go to the Settings view. In there, tap on Actions descriptions and you'll see a list of Charty's 11 actions. Tapping any of them will show you a detailed view of each actions parameters, outputs and miscellaneous information.</p>
 
                         <h4 id="q25" class="section">Where can I find example shortcuts to see what I can do with Charty?</h4>
-                        <p>You can se 27 examples in the Examples' gallery inside the app just by tapping on the Examples button in the top left of the main view. You can also head to the <a href="examples.html">Examples</a> page here in the website to see a running list of more shortcuts!</p>
+                        <p>You can see 42 examples in the Examples' gallery inside the app just by tapping on the Examples button in the top left of the main view. You can also head to the <a href="examples.html">Examples</a> page here in the website to see a running list of more shortcuts!</p>
                     </div>
                 </div>
                 <div class="row text-left">
@@ -349,7 +377,7 @@
                     <div class="col-12 col-md-8">
                         <h3 id="exporting" class="section text-center my-4"><strong>Exporting</strong></h3>
                         <h4 id="q31" class="section">Is it possible to export images of the charts?</h4>
-                        <p>Definitely! You can either do it using the <strong>Copy Chart To Clipboard</strong> action on your shortcut or you can do it directly on the app. Both of these ways use the export profiles to configure how the chart will be exported.</p>
+                        <p>Definitely! You can either do it using the <strong>Export Chart As Image</strong> action on your shortcut or you can do it directly on the app. Both of these ways use the export profiles to configure how the chart will be exported.</p>
 
                         <h4 id="q32" class="section">What are export profiles?</h4>
                         <p>Export profiles are bundles of settings that define how a chart should be exported, so you'll only have configure them once, and then export everything. These are the settings controlled by export profiles:</p>
@@ -384,8 +412,8 @@
                 <div class="row text-left">
                     <div class="col-0 col-md-2"></div> 
                     <div class="col-12 col-md-8">
-                        <h4 id="q34" class="section">How do I use the Copy Chart To Clipboard action?</h4>
-                        <p>When you add the Copy Chart To Clipboard action, you'll need to provide the ID of the chart you're trying to export and an export profile. If you choose the default profile or any other profile you've created, you're done. There's no need to fiddle with the other parameters as Charty will get all the required information from the profiles.</p>
+                        <h4 id="q34" class="section">How do I use the Export Chart As Image action?</h4>
+                        <p>When you add the Export Chart As Image action, you'll need to provide the ID of the chart you're trying to export and an export profile. If you choose the default profile or any other profile you've created, you're done. There's no need to fiddle with the other parameters as Charty will get all the required information from the profiles.</p>
                         <p>But if you choose the Create new export profile option, you should modify at least one of the other parameters, otherwise, it'll be exported with the default values that are identical to the Default export profile.</p>
                     </div>
                 </div>
@@ -403,7 +431,7 @@
                     <div class="col-0 col-md-2"></div> 
                     <div class="col-12 col-md-8">
                         <h4 id="q35" class="section">Shortcuts opens Charty when running the Copy Chart To Clipboard action. Is something wrong?</h4>
-                        <p>There isn't! Due to memory and UI constraints, Charty needs to be opened in order to export a chart as an image. The best you can do is add a <strong>Wait to Return</strong> action after the <strong>Copy Chart To Clipboard</strong> action. This way, you'll guarantee Shortcuts waits for Charty to give back control before going to the next action.<p>
+                        <p>You shouldn't be using the Copy Chart To Clipboard action anymore! Since Charty 1.3, the new Export Chart As Image has been introduced making it possible to avoid exactly this sort of problem!<p>
                     </div>
                 </div>
                 <div class="row text-left">

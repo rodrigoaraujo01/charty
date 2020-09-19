@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140139432-2');
+        </script>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="apple-itunes-app" content="app-id=1494386093">
+ 
+        <title>Charty – Create charts from Shortcuts</title>
+ 
+        <!-- CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+        <link rel="stylesheet" href="../assets/css/styles.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- META -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@chartyios"/>
+        <meta name="twitter:creator" content="@rodrigoaraujo"/>
+        <meta property="og:url" content="https://chartyios.app/tutorials/scatter_swarm.html"/>
+        <meta property="og:title" content="Creating swarms with scatter plots"/>
+        <meta property="og:description" content="How to use scatter plots to create swarm plots."/>
+        <meta property="og:image" content="https://chartyios.app/assets/img/og/og_swarm.png"/>
+        
+    </head>
+ 
+    <body>
+        <!-- Top menu -->
+        <nav class="navbar fixed-top navbar-expand-md">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
+                    <span>Charty</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <span class="navbar-toggler-icon">   
+                        <i class="fas fa-bars" style="font-size:28px;"></i>
+                    </span>                    
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../tutorials.html">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../examples.html">Examples</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../themes.html">Themes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../press-kit.html">Press Kit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="../privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+ 
+        <!-- Top content -->
+
+        
+        <div id="main-content">
+            <div class="container my-4 py-4">
+                <div class="row pt-4 my-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <small><em>September 20, 2020</em></small>
+                        <h1>Health widgets with Charty – Part 1</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p class="text-left">
+                            Apple released iOS 14 last Tuesday, and hasn’t included widgets for Health data. But that doesn’t mean you won’t have them, because using Charty’s actions you’ll learn how to recreate them!
+                        </p>
+
+                        <p class="text-left">
+                            We’ll start with the following chart from the Fitness app!
+                        </p>
+                        
+                        <picture>
+                            <img src="../assets/img/tutorials/5_health_1/fitness_heart_rate.jpeg" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Heart rate analysis</figcaption>
+
+                        <p class="text-left">
+                            This chart is created for each of your workouts, and shows a minute by minute analysis of minimum and maximum heart rate variation.
+                        </p>
+
+                        <p class="text-left">
+                            The good news is that same data set is available in Shortcuts using the Find Health Samples action!
+                        </p>
+
+                        <p class="text-left">
+                            Let’s first start by getting the last workout using Toolbox Pro’s Get Workouts action! It’s set up to get just one workout of any type.
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/get_workout_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/get_workout_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Toolbox Pro's Get Workouts action</figcaption>
+
+                        <p class="text-left">
+                            We’ll use the variable Day to store the start time of the workout returned from that action, which we’ll then use to filter the health data in the <strong>Find Health Samples</strong> action.
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/find_health_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/find_health_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Find Health Data action</figcaption>
+
+                        <p class="text-left">
+                            The health action doesn’t allow filtering based on time, but we can use Charty’s <strong>Filter Data</strong> action to do just that!
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/filter_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/filter_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Charty's Filter Data action</figcaption>
+
+                        <p class="text-left">
+                            The filter data action returns a dataset containing the filtered x and y values lists, but that’s still raw data measured multiple times every minute. The next step then is to group those values using the <strong>Group Data</strong> action associated with min and max functions. 
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/group_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/group_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Charty's Group Data action</figcaption>
+
+
+                        <p class="text-left">
+                            Notice there's no connection between the group actions: that happens because both of them act over the result of the Filter action, getting the minimum and maximum heart rate values of each minute.
+                        </p>
+
+                        <p class="text-left">
+                            So we now have the data we need, right? Not yet! In order to create that floating bars look, we’ll use a simple trick. The idea here is to stack two bars, and then set the lower bar to be transparent. The pictures below show a step by step sequence of what we're going to do using the <strong>Style Bar Series</strong> action.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-md-none">
+                        <div class="row mt-4">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <picture>
+                                    <source srcset="../assets/img/tutorials/5_health_1/stack_1_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="../assets/img/tutorials/5_health_1/stack_1_light.png" class="img-fluid rounded" width="400" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <picture>
+                                    <source srcset="../assets/img/tutorials/5_health_1/stack_2_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="../assets/img/tutorials/5_health_1/stack_2_light.png" class="img-fluid rounded" width="400" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <picture>
+                                    <source srcset="../assets/img/tutorials/5_health_1/stack_3_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="../assets/img/tutorials/5_health_1/stack_3_light.png" class="img-fluid rounded" width="400" alt="">
+                                </picture>
+                                <figcaption class="text-center figure-caption">The invisible bar trick</figcaption>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-none d-md-block">
+                        <div class="row mt-4">
+                            <div class="col-4">
+                                <picture>
+                                    <source srcset="../assets/img/tutorials/5_health_1/stack_1_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="../assets/img/tutorials/5_health_1/stack_1_light.png" class="img-fluid rounded" width="400" alt="">
+                                </picture>
+                            </div>
+                            <div class="col-4">
+                                <picture>
+                                    <source srcset="../assets/img/tutorials/5_health_1/stack_2_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="../assets/img/tutorials/5_health_1/stack_2_light.png" class="img-fluid rounded" width="400" alt="">
+                                </picture>
+                                <figcaption class="text-center figure-caption">The invisible bar trick</figcaption>
+                            </div>
+                            <div class="col-4">
+                                <picture>
+                                    <source srcset="../assets/img/tutorials/5_health_1/stack_3_dark.png" media="(prefers-color-scheme: dark)">
+                                    <img src="../assets/img/tutorials/5_health_1/stack_3_light.png" class="img-fluid rounded" width="400" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p class="text-left">
+                            As the floating bars need to start at the minimum heart rate, it’s easy to see that’s the value we have to associate with the lower bars!
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/stack_min_heart_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/stack_min_heart_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Minimum heart rates</figcaption>
+
+                        <p class="text-left">
+                            The second bar series is a little bit trickier, because they need to stop at the maximum heart rate and start at the minimum. 
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/stack_max_heart_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/stack_max_heart_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Maximum heart rates</figcaption>
+
+                        <p class="text-left">
+                            Checking the picture below, it's easy to see the values of the floating bars are the differences between the maximum and minimum heart rate values.
+                        </p>
+                            
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/stack_min_max_heart_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/stack_min_max_heart_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Floating bar height = Max Heart Rate - Min Heart Rate</figcaption>
+
+                        <p class="text-left">
+                            As we cant calulate the difference between two lists of values in Shortcuts directly, we'll need to iterate over each element using a repeat loop. We'll repeat over each element of the maximum heart rate dataset, and at each step, we'll get the equivalent minimum value using the <strong>Get Item From List</strong> action. All of these values are stored in the ProcVals variable, that'll use as the y values list for our floating bar series.
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/repeat_loop_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/repeat_loop_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Calculating the height of the floating bar</figcaption>
+
+                        <p class="text-left">
+                            After that, we just need to create the chart using the <strong>New Chart With Series</strong> to create the chart and add the bottom bars. After that, there’s a <strong>Style Bar Series</strong> action that makes the bottom bar part of a stack and sets its color to be transparent.
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/chart_creation_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/chart_creation_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Creating the chart and implementing the invisible bar trick</figcaption>
+
+                        <p class="text-left">
+                            Then, there’s a block that adds the floating bars series and styles it, to stack it and make its color be the same as the one in the chart from the Fitness app!
+                        </p>
+                        
+                        <p class="text-left">
+                            Lastly, we'll use two Style Axis actions, one to update the lower limit in the left axis and the other to format the time in the x axis.
+                        </p>
+
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/axis_style_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/axis_style_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <figcaption class="text-center figure-caption">Styling the axes</figcaption>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <p>And here is the resulting chart.</p>
+                        <picture>
+                            <source srcset="../assets/img/tutorials/5_health_1/result_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/tutorials/5_health_1/result_light.png" class="img-fluid rounded" width="400" alt="">
+                        </picture>
+                        <p>And here is it running on my iPhone and updating the widget to my latest workout data!</p>
+                        <video width="360" height="540" controls>
+                            <source src="../assets/img/tutorials/5_health_1/shortcut_update.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-0 col-md-2"></div> 
+                    <div class="col-12 col-md-8">
+                        <button type="button" class="btn btn-primary"><a class="text-white" href="https://www.icloud.com/shortcuts/4c2160f4ee0d470fb8a369c45a010dfc">Download the shortcut</a></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        
+
+        <!-- Footer -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="m-0 p-0">
+                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
+                        </p>
+                        <p class="m-0 p-0">
+                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="../assets/js/jquery-3.2.1.min.js"></script>
+        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- <script src="../assets/js/jquery.backstretch.min.js"></script> -->
+        <!-- <script src="../assets/js/wow.min.js"></script> -->
+        <!-- <script src="../assets/js/retina-1.1.0.min.js"></script> -->
+        <!-- <script src="../assets/js/waypoints.min.js"></script> -->
+        <script src="../assets/js/scripts.js"></script>
+    </body>
+</html>

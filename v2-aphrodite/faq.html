@@ -95,7 +95,6 @@
                             <li><a href="#q-actions">What actions does Charty add to Shortcuts?</a></li>
                             <li><a href="#q-data-format">What kind of data should I pass to Charty's values parameters?</a></li>
                             <li><a href="#q-learn-more">Is there anywhere I can learn more about Charty's actions?</a></li>
-                            <li><a href="#q-examples">Where can I find example shortcuts?</a></li>
                         </ul>
                     </li>
                     <li>
@@ -119,7 +118,7 @@
                         <ul>
                             <li><a href="#q-theme">Can I change the chart theme from Shortcuts?</a></li>
                             <li><a href="#q-custom-theme">Can I add custom color themes to Charty?</a></li>
-                            <li><a href="#q-custom-labels">Can I add custom labels to an axis?</a></li>
+                            <li><a href="#q-custom-labels">Can I add text labels to an axis?</a></li>
                             <li><a href="#q-interpolation">What line interpolation styles are available?</a></li>
                             <li><a href="#q-stacking">Can I stack series?</a></li>
                         </ul>
@@ -128,6 +127,7 @@
                         <a href="#widgets">Widgets</a>
                         <ul>
                             <li><a href="#q-widget-types">What widgets are available?</a></li>
+                            <li><a href="#q-lock-screen-widgets">Does Charty support Lock Screen widgets?</a></li>
                             <li><a href="#q-widget-update">How do I update widgets from Shortcuts?</a></li>
                         </ul>
                     </li>
@@ -151,17 +151,27 @@
 
                 <div class="faq-item" id="q-beginner">
                     <h3>I'm a total beginner, how do I use Charty?</h3>
-                    <p>You'll use Charty the same way you'd create a chart on paper. On paper you would gather your information, get some paper, draw some axes, plot your data, and share your creation.</p>
-                    <p>In a shortcut using Charty it's exactly the same:</p>
+                    <p>You'll use Charty the same way you'd create a chart on paper: gather your data, draw a chart, plot your points, and share the result.</p>
+                    <p>In a shortcut, you do this by adding Charty's actions one by one:</p>
                     <ol>
-                        <li>Grab your data from a file, the clipboard, or a utility like <a href="https://datajar.app">Data Jar</a>, or just put some numbers together within your shortcut;</li>
-                        <li>Create a chart using Charty's <strong>New Chart</strong> action;</li>
-                        <li>Plot your information using the <strong>Add Series To Chart</strong> action;</li>
-                        <li>Export your chart as an image using the <strong>Export Chart As Image</strong> action;</li>
-                        <li>Display the chart from within your shortcut, for example using Shortcuts' <strong>Quick Look</strong> action;</li>
-                        <li>If you don't want to keep your chart, you can throw it away using the <strong>Delete Chart</strong> action.</li>
+                        <li>Use the <strong>File</strong> action to grab data from a file, use <a href="https://datajar.app">Data Jar</a>'s actions to load it, or just put some numbers in a <strong>Text</strong> action;</li>
+                        <li>Add Charty's <strong>New Chart</strong> action to your shortcut to create a chart;</li>
+                        <li>Add the <strong>Add Series To Chart</strong> action to plot your data on the chart;</li>
+                        <li>Add the <strong>Export Chart As Image</strong> action to save your chart as an image;</li>
+                        <li>Add Shortcuts' <strong>Quick Look</strong> action to preview the result right from your shortcut.</li>
                     </ol>
-                    <!-- TODO: Example shortcut — "Simplest Chart": New Chart + Add Series To Chart + Export Chart As Image to create and export a simple bar chart -->
+                    <div class="faq-image-pair">
+                        <div class="faq-image-clipped">
+                            <picture>
+                                <source srcset="assets/img/faq/faq-simple-shortcut-dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="assets/img/faq/faq-simple-shortcut-light.png" alt="A simple shortcut that creates a chart with Charty" class="screenshot">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="assets/img/faq/faq-simple-chart-dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/faq-simple-chart-light.png" alt="The resulting chart from the simple shortcut" class="screenshot faq-blend">
+                        </picture>
+                    </div>
                 </div>
 
                 <div class="faq-item" id="q-cost">
@@ -182,8 +192,8 @@
 
                 <div class="faq-item" id="q-legacy">
                     <h3>I bought Charty Premium before. Do I need to subscribe?</h3>
-                    <p>No! If you purchased the original $4.99 Charty Premium unlock, you have lifetime access to everything in Charty 2.0. You don't need to subscribe.</p>
-                    <p>Starting with Charty 2.1, new features and actions (such as mathematical regressions) will be exclusive to subscribers. But everything available in 2.0 remains yours forever.</p>
+                    <p>If you purchased the original $4.99 Charty Premium unlock, you have lifetime access to everything in Charty 2.0. You don't need to subscribe.</p>
+                    <p>Starting with Charty 2.1, new features and actions will be exclusive to subscribers. But everything available in 2.0 remains yours forever.</p>
                 </div>
 
                 <div class="faq-item" id="q-chart-types">
@@ -194,13 +204,32 @@
                         <li><strong>Circular series:</strong> Pie and Donut charts for showing proportions and composition.</li>
                         <li><strong>Ring series:</strong> Ring charts that display progress toward a goal, similar to Apple's Activity rings. Supports grid layouts (2x2, 3x3, etc.) for tracking multiple metrics at once.</li>
                     </ul>
-                    <!-- TODO: Grid of all 7 chart types side by side — bar, line, area, scatter, pie, donut, ring. Similar layout to the charts section on the homepage. Light and dark variants. -->
-                    <!-- <div class="faq-image-grid">
+                    <div class="faq-image-grid">
                         <picture>
-                            <source srcset="assets/img/faq/chart_types_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/faq/chart_types_light.png" alt="All 7 chart types available in Charty" class="screenshot">
+                            <source srcset="assets/img/charts_numeric_1_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/charts_numeric_1_light.png" alt="Area chart example" class="screenshot">
                         </picture>
-                    </div> -->
+                        <picture>
+                            <source srcset="assets/img/charts_numeric_3_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/charts_numeric_3_light.png" alt="Line chart example" class="screenshot">
+                        </picture>
+                        <picture>
+                            <source srcset="assets/img/charts_circular_1_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/charts_circular_1_light.png" alt="Pie chart example" class="screenshot">
+                        </picture>
+                        <picture>
+                            <source srcset="assets/img/charts_numeric_2_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/charts_numeric_2_light.png" alt="Bar chart example" class="screenshot">
+                        </picture>
+                        <picture>
+                            <source srcset="assets/img/charts_numeric_4_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/charts_numeric_4_light.png" alt="Scatter chart example" class="screenshot">
+                        </picture>
+                        <picture>
+                            <source srcset="assets/img/charts_ring_1_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/charts_ring_1_light.png" alt="Ring chart example" class="screenshot">
+                        </picture>
+                    </div>
                 </div>
             </div>
 
@@ -363,13 +392,9 @@
 
                 <div class="faq-item" id="q-learn-more">
                     <h3>Is there anywhere I can learn more about Charty's actions?</h3>
-                    <p>Inside the app, you can find detailed descriptions of each action's parameters, outputs, and behavior. You can also check the <a href="examples.html">Examples</a> page on this website for shortcuts that demonstrate what you can do with Charty.</p>
+                    <p>Inside the app, you can find detailed descriptions of each action's parameters, outputs, and behavior.</p>
                 </div>
 
-                <div class="faq-item" id="q-examples">
-                    <h3>Where can I find example shortcuts?</h3>
-                    <p>You can find examples inside the app's Examples gallery. You can also visit the <a href="examples.html">Examples</a> page here on the website for more shortcuts and inspiration.</p>
-                </div>
             </div>
 
             <!-- Exporting -->
@@ -414,7 +439,18 @@
                 <div class="faq-item" id="q-healthkit">
                     <h3>Does Charty support data from HealthKit?</h3>
                     <p>Yes! HealthKit has great Shortcuts support. You can use the <strong>Find Health Samples</strong> action to get almost any data from HealthKit, then process it with Shortcuts and plot it with Charty.</p>
-                    <!-- TODO: Example shortcut — "HealthKit Chart": Uses Find Health Samples to get step count data from the past week, processes it with a Repeat loop, and plots it as a bar chart with Charty -->
+                    <div class="faq-image-pair">
+                        <div class="faq-image-clipped">
+                            <picture>
+                                <source srcset="assets/img/faq/faq-health-shortcut-dark.png" media="(prefers-color-scheme: dark)">
+                                <img src="assets/img/faq/faq-health-shortcut-light.png" alt="A shortcut that charts HealthKit data with Charty" class="screenshot">
+                            </picture>
+                        </div>
+                        <picture>
+                            <source srcset="assets/img/faq/faq-health-chart-dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="assets/img/faq/faq-health-chart-light.png" alt="The resulting HealthKit chart" class="screenshot faq-blend">
+                        </picture>
+                    </div>
                 </div>
 
                 <div class="faq-item" id="q-apis">
@@ -440,12 +476,12 @@
 
                 <div class="faq-item" id="q-custom-theme">
                     <h3>Can I add custom color themes to Charty?</h3>
-                    <p>Yes! Use the <strong>Add Custom Theme</strong> action to create a theme from a list of colors. You can also import theme files directly into the app. Check the <a href="themes.html">Themes</a> page for a collection of ready-to-use themes.</p>
+                    <p>Yes! Use the <strong>Add Custom Theme</strong> action to create a theme from a list of colors. You can also import theme files directly into the app.</p>
                 </div>
 
                 <div class="faq-item" id="q-custom-labels">
-                    <h3>Can I add custom labels to an axis?</h3>
-                    <p>Yes! Using the premium <strong>Style Axis</strong> action, you can set a custom formatter for any axis. Pass a list of values and their corresponding custom labels to display exactly what you want on your chart axes.</p>
+                    <h3>Can I add text labels to an axis?</h3>
+                    <p>Yes! Just pass the texts as the X values for your series and Charty will do the rest!</p>
                 </div>
 
                 <div class="faq-item" id="q-interpolation">
@@ -465,7 +501,7 @@
 
                 <div class="faq-item" id="q-stacking">
                     <h3>Can I stack series?</h3>
-                    <p>Yes! Charty supports multiple stacking modes for bar, line, and area series:</p>
+                    <p>Yes! Charty supports multiple stacking modes for bar and area series:</p>
                     <ul>
                         <li><strong>Standard</strong> &mdash; series values are stacked on top of each other</li>
                         <li><strong>Unstacked</strong> &mdash; series are displayed side by side (default)</li>
@@ -489,6 +525,11 @@
                         <li><strong>Data Widget</strong> &mdash; displays a numeric value</li>
                         <li><strong>Chart + Data Widget</strong> &mdash; combines a chart with a numeric data display</li>
                     </ul>
+                </div>
+
+                <div class="faq-item" id="q-lock-screen-widgets">
+                    <h3>Does Charty support Lock Screen widgets?</h3>
+                    <p>Not yet, but Lock Screen widgets are on the roadmap. Stay tuned for a future update!</p>
                 </div>
 
                 <div class="faq-item" id="q-widget-update">

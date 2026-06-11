@@ -1,14 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-140139432-2');
-    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,9 +12,16 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Charty 2.0 – Create charts from Shortcuts">
     <meta property="og:description" content="26 actions, 7 series types, widgets that actually update. Completely rebuilt in SwiftUI.">
-    <meta property="og:image" content="assets/img/og/og_v2.png">
+    <meta property="og:image" content="https://chartyios.app/assets/img/og/og_v2.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://chartyios.app">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://chartyios.app/">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F0F1A" media="(prefers-color-scheme: dark)">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,6 +30,42 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/styles-v2.css">
+
+    <!-- Hero image preload -->
+    <link rel="preload" as="image" href="assets/img/hero_v2_light.png" media="(prefers-color-scheme: light)" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/img/hero_v2_dark.png" media="(prefers-color-scheme: dark)" fetchpriority="high">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Charty for Shortcuts",
+        "operatingSystem": "iOS",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "Charty gives you 26 powerful actions for Apple Shortcuts to create beautiful charts, widgets, and more.",
+        "url": "https://chartyios.app/",
+        "installUrl": "https://apps.apple.com/us/app/charty-for-shortcuts/id1494386093",
+        "offers": [
+            {
+                "@type": "Offer",
+                "name": "Charty Premium Monthly",
+                "price": "0.99",
+                "priceCurrency": "USD"
+            },
+            {
+                "@type": "Offer",
+                "name": "Charty Premium Yearly",
+                "price": "9.99",
+                "priceCurrency": "USD"
+            }
+        ],
+        "author": {
+            "@type": "Person",
+            "name": "Rodrigo Araújo"
+        }
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
@@ -56,6 +91,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="press-kit.html">Press Kit</a></li>
                 <li><a href="privacy-policy.html">Privacy Policy</a></li>
                 <li><a href="terms-of-use.html">Terms of Use</a></li>
@@ -66,9 +102,23 @@
 
     <!-- Hero -->
     <section class="hero" id="hero">
+        <svg class="hero-bg-chart" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <path class="hero-bg-line" d="M-20,470 C120,430 200,330 320,350 C440,370 520,250 640,262 C760,274 840,170 960,190 C1080,210 1200,120 1320,112 L1460,100"/>
+            <g class="hero-bg-bars">
+                <rect x="90" y="380" width="34" height="160" rx="6"/>
+                <rect x="148" y="320" width="34" height="220" rx="6"/>
+                <rect x="206" y="420" width="34" height="120" rx="6"/>
+                <rect x="1200" y="350" width="34" height="190" rx="6"/>
+                <rect x="1258" y="300" width="34" height="240" rx="6"/>
+                <rect x="1316" y="400" width="34" height="140" rx="6"/>
+            </g>
+            <circle class="hero-bg-ring" cx="1330" cy="150" r="46"/>
+            <circle class="hero-bg-ring hero-bg-ring--small" cx="130" cy="140" r="30"/>
+        </svg>
         <div class="container hero-centered">
+            <span class="hero-badge"><span class="hero-badge-dot"></span>Version 2.0 — coming soon</span>
             <h1 class="hero-title">Create gorgeous <span class="gradient-text gradient-text--charts">charts</span></h1>
-            <p class="hero-subtitle">Charty gives you 27 powerful actions for Apple's Shortcuts app, letting you visualize any data beautifully.</p>
+            <p class="hero-subtitle">Charty gives you 26 powerful actions for Apple's Shortcuts app, letting you visualize any data beautifully.</p>
             <a href="https://apps.apple.com/us/app/charty-for-shortcuts/id1494386093?ls=1" class="app-store-btn">
                 <img src="assets/img/downloadAppStore.svg" alt="Download on the App Store">
             </a>
@@ -159,29 +209,29 @@
                     <div class="charts-col">
                         <picture>
                             <source srcset="assets/img/charts_numeric_1_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/charts_numeric_1_light.png" alt="Area chart example" class="screenshot">
+                            <img src="assets/img/charts_numeric_1_light.png" alt="Area chart example" class="screenshot" loading="lazy">
                         </picture>
                         <picture>
                             <source srcset="assets/img/charts_numeric_3_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/charts_numeric_3_light.png" alt="Line chart example" class="screenshot">
+                            <img src="assets/img/charts_numeric_3_light.png" alt="Line chart example" class="screenshot" loading="lazy">
                         </picture>
                         <picture>
                             <source srcset="assets/img/charts_circular_1_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/charts_circular_1_light.png" alt="Pie chart example" class="screenshot">
+                            <img src="assets/img/charts_circular_1_light.png" alt="Pie chart example" class="screenshot" loading="lazy">
                         </picture>
                     </div>
                     <div class="charts-col charts-col--offset">
                         <picture>
                             <source srcset="assets/img/charts_numeric_2_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/charts_numeric_2_light.png" alt="Bar chart example" class="screenshot">
+                            <img src="assets/img/charts_numeric_2_light.png" alt="Bar chart example" class="screenshot" loading="lazy">
                         </picture>
                         <picture>
                             <source srcset="assets/img/charts_numeric_4_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/charts_numeric_4_light.png" alt="Scatter chart example" class="screenshot">
+                            <img src="assets/img/charts_numeric_4_light.png" alt="Scatter chart example" class="screenshot" loading="lazy">
                         </picture>
                         <picture>
                             <source srcset="assets/img/charts_ring_1_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/charts_ring_1_light.png" alt="Ring chart example" class="screenshot">
+                            <img src="assets/img/charts_ring_1_light.png" alt="Ring chart example" class="screenshot" loading="lazy">
                         </picture>
                     </div>
                 </div>
@@ -206,34 +256,34 @@
     <!-- Widgets Section -->
     <section class="widgets-section section" id="widgets">
         <div class="container">
-            <h2 class="section-title">4 Widget styles in multiple sizes</h2>
-            <p class="section-subtitle">Four widget types for your Home Screen — and they refresh when your data changes</p>
+            <h2 class="section-title reveal">4 Widget styles in multiple sizes</h2>
+            <p class="section-subtitle reveal">Four widget types for your Home Screen — and they refresh when your data changes</p>
             <div class="widgets-grid reveal">
                 <div class="widgets-row">
-                    <div class="widget-item">
+                    <div class="widget-item reveal">
                         <picture>
                             <source srcset="assets/img/widget_1_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/widget_1_light.png" alt="Chart and ring widgets" class="screenshot">
+                            <img src="assets/img/widget_1_light.png" alt="Chart and ring widgets" class="screenshot" loading="lazy">
                         </picture>
                     </div>
-                    <div class="widget-item">
+                    <div class="widget-item reveal">
                         <picture>
                             <source srcset="assets/img/widget_2_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/widget_2_light.png" alt="Data and combined widgets" class="screenshot">
+                            <img src="assets/img/widget_2_light.png" alt="Data and combined widgets" class="screenshot" loading="lazy">
                         </picture>
                     </div>
                 </div>
                 <div class="widgets-row">
-                    <div class="widget-item">
+                    <div class="widget-item reveal">
                         <picture>
                             <source srcset="assets/img/widget_3_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/widget_3_light.png" alt="Additional widget examples" class="screenshot">
+                            <img src="assets/img/widget_3_light.png" alt="Additional widget examples" class="screenshot" loading="lazy">
                         </picture>
                     </div>
-                    <div class="widget-item">
+                    <div class="widget-item reveal">
                         <picture>
                             <source srcset="assets/img/widget_4_dark.png" media="(prefers-color-scheme: dark)">
-                            <img src="assets/img/widget_4_light.png" alt="More widget variations" class="screenshot">
+                            <img src="assets/img/widget_4_light.png" alt="More widget variations" class="screenshot" loading="lazy">
                         </picture>
                     </div>
                 </div>
@@ -252,11 +302,11 @@
                 <div class="feature-screenshots grid-1x2">
                     <picture>
                         <source srcset="assets/img/shortcuts_1_dark.PNG" media="(prefers-color-scheme: dark)">
-                        <img src="assets/img/shortcuts_1_light.PNG" alt="A shortcut using Charty actions" class="screenshot">
+                        <img src="assets/img/shortcuts_1_light.PNG" alt="A shortcut using Charty actions" class="screenshot" loading="lazy">
                     </picture>
                     <picture>
                         <source srcset="assets/img/shortcuts_2_dark.PNG" media="(prefers-color-scheme: dark)">
-                        <img src="assets/img/shortcuts_2_light.PNG" alt="Full list of Charty actions" class="screenshot">
+                        <img src="assets/img/shortcuts_2_light.PNG" alt="Full list of Charty actions" class="screenshot" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -300,6 +350,35 @@
         </div>
     </section>
 
+    <!-- Pricing -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <h2 class="section-title reveal">Simple pricing</h2>
+            <p class="section-subtitle reveal">Start free with 5 essential actions — unlock everything with a subscription</p>
+            <div class="pricing-grid">
+                <div class="pricing-card reveal">
+                    <div class="pricing-badge">Monthly</div>
+                    <div class="pricing-amount">
+                        <span class="price-currency">$</span><span class="price-value">0.99</span><span class="price-period">/month</span>
+                    </div>
+                    <p class="pricing-desc">Full access to all 26 actions, every series type, themes, gradients, and widgets.</p>
+                </div>
+                <div class="pricing-card pricing-card--featured reveal">
+                    <div class="pricing-badge">Yearly</div>
+                    <div class="pricing-amount">
+                        <span class="price-currency">$</span><span class="price-value">9.99</span><span class="price-period">/year</span>
+                    </div>
+                    <p class="pricing-desc">Everything Charty has to offer, for less than the price of ten months.</p>
+                    <span class="pricing-save">Save 16%</span>
+                </div>
+            </div>
+            <div class="pricing-legacy reveal">
+                <strong>Bought Charty Premium before?</strong>
+                You keep full access to everything in Charty 2.0 — no subscription needed. <a href="faq.html#q-legacy">Read more in the FAQ</a>.
+            </div>
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta" id="cta">
         <div class="container">
@@ -320,6 +399,7 @@
             </div>
             <div class="footer-links">
                 <a href="faq.html">FAQ</a>
+                <a href="blog.html">Blog</a>
                 <a href="press-kit.html">Press Kit</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms-of-use.html">Terms of Use</a>

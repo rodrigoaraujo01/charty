@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id=1494386093">
+
+    <title>Charty 2.0 – Aphrodite</title>
+    <meta name="description" content="Charty 2.0 – Aphrodite: completely rebuilt in SwiftUI with SwiftCharts and AppIntents. 26 actions, widgets that actually update, new themes and gradients.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Charty 2.0 – Aphrodite">
+    <meta property="og:description" content="Completely rebuilt in SwiftUI: 26 actions, widgets that actually update, new themes and gradients.">
+    <meta property="og:image" content="https://chartyios.app/assets/img/og/og_v2.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://chartyios.app/blog/charty20aphrodite.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="canonical" href="https://chartyios.app/blog/charty20aphrodite.html">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F0F1A" media="(prefers-color-scheme: dark)">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/styles-v2.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="../assets/ico/site.webmanifest">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light" id="navbar">
+        <div class="container navbar-inner">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/img/logo.png" width="32" height="32" alt="Charty">
+                <span>Charty</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../faq.html">FAQ</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../press-kit.html">Press Kit</a></li>
+                <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="../terms-of-use.html">Terms of Use</a></li>
+                <li><a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#114;&#097;&#112;&#112;&#116;&#111;&#114;&#046;&#100;&#101;&#118;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="faq-header">
+        <div class="container">
+            <span class="blog-date">June 11, 2026</span>
+            <h1 class="faq-header-title">Charty 2.0 – Aphrodite</h1>
+        </div>
+    </section>
+
+    <!-- Post -->
+    <section class="faq-content">
+        <div class="container faq-container post-body">
+
+            <p>Five years after Theseus, Charty's biggest update ever is almost here: 2.0 – Aphrodite. This isn't an update so much as a brand new app: every screen, every action and every chart has been rebuilt from scratch.</p>
+            <figure class="post-figure">
+                <img src="../assets/img/blog/update20aphrodite/hero_visualize.png" alt="Charty 2.0 charts collage: rings, steps, sleep, expenses and heart rate" loading="lazy">
+                <figcaption>Area, scatter, bar, and ring charts — all from Shortcuts</figcaption>
+            </figure>
+
+            <h2>Rebuilt from the ground up</h2>
+            <p>Charty 2.0 is written entirely in <strong>SwiftUI</strong>, renders its charts with Apple's <strong>SwiftCharts</strong> framework, and exposes all of its actions through <strong>AppIntents</strong> — the modern foundation behind Shortcuts. Beyond making the app faster and more native, this rebuild makes Charty dramatically easier to evolve, so updates can come more often.</p>
+            <figure class="post-figure">
+                <img src="../assets/img/blog/update20aphrodite/hero_rebuilt.png" alt="Charty 2.0 next to Charty 1.0, rebuilt with SwiftUI and Swift Charts" loading="lazy">
+                <figcaption>2.0 side by side with 1.0</figcaption>
+            </figure>
+            <p>Every chart type made the jump: bar, line, area, scatter, pie, donut and rings — all rendered natively, in light and dark mode.</p>
+            <div class="post-grid">
+                <figure class="post-figure">
+                    <picture>
+                        <source srcset="../assets/img/charts_numeric_1_dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="../assets/img/charts_numeric_1_light.png" alt="Area chart example" loading="lazy">
+                    </picture>
+                </figure>
+                <figure class="post-figure">
+                    <picture>
+                        <source srcset="../assets/img/charts_circular_1_dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="../assets/img/charts_circular_1_light.png" alt="Pie chart example" loading="lazy">
+                    </picture>
+                </figure>
+                <figure class="post-figure">
+                    <picture>
+                        <source srcset="../assets/img/charts_ring_1_dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="../assets/img/charts_ring_1_light.png" alt="Ring chart example" loading="lazy">
+                    </picture>
+                </figure>
+            </div>
+
+            <h2>Widgets that actually update</h2>
+            <p>The number one complaint about Charty has always been widgets not refreshing. That era is over: in 2.0, widgets reliably update whenever your data changes. Run a shortcut, watch your Home Screen follow along — the way it always should have worked.</p>
+            <p>Four widget styles are available in multiple sizes, so your most important numbers are always a glance away.</p>
+            <div class="widgets-grid">
+                <div class="widgets-row">
+                    <div class="widget-item">
+                        <picture>
+                            <source srcset="../assets/img/widget_1_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/widget_1_light.png" alt="Chart and ring widgets" class="screenshot" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="widget-item">
+                        <picture>
+                            <source srcset="../assets/img/widget_2_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/widget_2_light.png" alt="Data and combined widgets" class="screenshot" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+                <div class="widgets-row">
+                    <div class="widget-item">
+                        <picture>
+                            <source srcset="../assets/img/widget_3_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/widget_3_light.png" alt="Additional widget examples" class="screenshot" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="widget-item">
+                        <picture>
+                            <source srcset="../assets/img/widget_4_dark.png" media="(prefers-color-scheme: dark)">
+                            <img src="../assets/img/widget_4_light.png" alt="More widget variations" class="screenshot" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+            <h2>More beautiful than ever</h2>
+            <p>Aphrodite earns her name with a full styling upgrade: new color themes throughout the app, and — a first for Charty — <strong>gradients</strong> that can be applied to any series. Your charts have never looked this good.</p>
+            <div class="post-grid post-grid--2">
+                <figure class="post-figure">
+                    <picture>
+                        <source srcset="../assets/img/charts_numeric_2_dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="../assets/img/charts_numeric_2_light.png" alt="Colorful stream area chart" loading="lazy">
+                    </picture>
+                </figure>
+                <figure class="post-figure">
+                    <picture>
+                        <source srcset="../assets/img/charts_numeric_3_dark.png" media="(prefers-color-scheme: dark)">
+                        <img src="../assets/img/charts_numeric_3_light.png" alt="Scatter grid chart" loading="lazy">
+                    </picture>
+                </figure>
+            </div>
+
+            <h2>26 actions, fully documented</h2>
+            <p>Charty 2.0 ships with 26 actions covering chart creation, series management, styling, data processing and export. And to help you get the most out of them, the new examples come with detailed instructions explaining what each action in the shortcut is doing — learning Charty by example is now built into the app.</p>
+            <p>And when your chart is ready, exporting it as an image and sharing it anywhere takes a single action.</p>
+
+            <h2>A new business model</h2>
+            <p>Since launch, Charty has been a freemium app with a one-time $4.99 unlock. Starting with 2.0, Charty moves to a subscription: <strong>$0.99/month</strong> or <strong>$9.99/year</strong>. The free tier still gives you 5 essential actions to chart with.</p>
+            <p>If you bought the original Premium unlock: <strong>thank you</strong> — you keep full access to everything in Charty 2.0, forever, no subscription needed. Features added in future updates may require a subscription, but nothing you have today is being taken away. The details are in the <a href="../faq.html#q-legacy">FAQ</a>.</p>
+
+            <h2>What didn't make the cut</h2>
+            <p>Being honest about the trade-offs of a full rewrite: 2.0 launches without the Portuguese, French and Spanish localizations, and the in-app video tutorials are gone, replaced by the new documented examples. Localization may return in the future.</p>
+
+            <h2>The codename</h2>
+            <p>Charty 2.0 is codenamed Aphrodite!</p>
+            <p><a href="https://en.wikipedia.org/wiki/Aphrodite">Aphrodite</a> is the greek goddess of beauty — and for the most beautiful version of Charty ever shipped, rebuilt around themes, gradients and SwiftCharts, no other name would do.</p>
+            <p>Charty 2.0 is coming to the App Store very soon. Follow along on <a href="https://bsky.app/profile/chartyios.app">Bluesky</a>, <a href="https://indieapps.space/@charty">Mastodon</a> or <a href="https://www.reddit.com/r/chartyapp">Reddit</a>!</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="../assets/img/logo.png" width="32" height="32" alt="Charty">
+                <span>Charty</span>
+            </div>
+            <div class="footer-links">
+                <a href="../faq.html">FAQ</a>
+                <a href="../blog.html">Blog</a>
+                <a href="../press-kit.html">Press Kit</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms-of-use.html">Terms of Use</a>
+                <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#114;&#097;&#112;&#112;&#116;&#111;&#114;&#046;&#100;&#101;&#118;">Contact</a>
+            </div>
+            <p class="footer-credit">Developed by <a href="https://mastodon.social/@rmaraujo" rel="me">Rodrigo Araújo</a> at <a href="https://rapptor.dev">Rapptor</a></p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/scripts-v2.js"></script>
+</body>
+</html>

@@ -1,522 +1,688 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<head>
 
-        gtag('config', 'UA-140139432-2');
-        </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id=1494386093">
 
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="apple-itunes-app" content="app-id=1494386093">
+    <title>Press Kit — Charty for Shortcuts</title>
+    <meta name="description" content="Press kit for Charty 2.0 — The Charting Engine for Apple Shortcuts. Press release, fact sheet, media assets, and contact information.">
 
-        <title>Charty – Create charts from Shortcuts</title>
- 
-        <!-- CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Press Kit — Charty for Shortcuts">
+    <meta property="og:description" content="Press kit for Charty 2.0 — The Charting Engine for Apple Shortcuts.">
+    <meta property="og:image" content="https://chartyios.app/assets/img/og/og_v2.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://chartyios.app/press-kit.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
-        <!-- Favicon and touch icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-    </head>
- 
-    <body>
-        <!-- Top menu -->
-        <nav class="navbar fixed-top navbar-expand-md">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
-                    <span>Charty</span>
+    <link rel="canonical" href="https://chartyios.app/press-kit.html">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F0F1A" media="(prefers-color-scheme: dark)">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles-v2.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/site.webmanifest">
+
+    <style>
+        /* Press Kit page styles */
+        .pk-header {
+            background: var(--color-bg-primary);
+            padding: calc(64px + var(--space-xl)) 0 var(--space-lg);
+            text-align: center;
+        }
+
+        .pk-header-icon {
+            width: 96px;
+            height: 96px;
+            border-radius: 22px;
+            margin: 0 auto var(--space-md);
+        }
+
+        .pk-header-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .pk-header-tagline {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: var(--color-text-secondary);
+            max-width: 540px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Table of contents */
+        .pk-toc {
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        .pk-toc h2 {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--color-text-primary);
+        }
+
+        .pk-toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .pk-toc a {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+        }
+
+        .pk-toc a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Content area */
+        .pk-content {
+            padding: 0 0 var(--space-2xl);
+        }
+
+        .pk-container {
+            max-width: 780px;
+        }
+
+        /* Sections */
+        .pk-section {
+            margin-bottom: var(--space-xl);
+            scroll-margin-top: 80px;
+        }
+
+        .pk-section-title {
+            font-size: var(--font-size-xl);
+            font-weight: 700;
+            color: var(--color-text-primary);
+            padding-bottom: var(--space-sm);
+            border-bottom: 2px solid var(--color-border);
+            margin-bottom: var(--space-lg);
+        }
+
+        .pk-section h3 {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-sm);
+            margin-top: var(--space-lg);
+        }
+
+        .pk-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .pk-section p {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            margin-bottom: var(--space-sm);
+        }
+
+        .pk-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pk-section ul {
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            padding-left: var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .pk-section li {
+            margin-bottom: 4px;
+        }
+
+        .pk-section strong {
+            color: var(--color-text-primary);
+        }
+
+        /* Detail grid */
+        .pk-detail-grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: var(--space-xs) var(--space-md);
+            margin-bottom: var(--space-sm);
+        }
+
+        .pk-detail-label {
+            font-weight: 700;
+            color: var(--color-text-primary);
+            font-size: var(--font-size-sm);
+        }
+
+        .pk-detail-value {
+            color: var(--color-text-secondary);
+            font-size: var(--font-size-sm);
+        }
+
+        .pk-detail-value a {
+            color: var(--color-accent);
+        }
+
+        @media (max-width: 768px) {
+            .pk-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2px var(--space-md);
+            }
+
+            .pk-detail-value {
+                margin-bottom: var(--space-sm);
+            }
+        }
+
+        /* Stats row */
+        .pk-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .pk-stat {
+            text-align: center;
+            padding: var(--space-md);
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+        }
+
+        .pk-stat-number {
+            font-size: var(--font-size-2xl);
+            font-weight: 900;
+            color: var(--color-text-primary);
+            line-height: 1.2;
+        }
+
+        .pk-stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+            margin-top: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .pk-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Media assets grid */
+        .pk-media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+            margin-top: var(--space-lg);
+        }
+
+        .pk-media-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            background: var(--color-bg-secondary);
+        }
+
+        .pk-media-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .pk-media-caption {
+            padding: var(--space-sm);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pk-media-caption span {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            font-weight: 600;
+        }
+
+        .pk-download-link {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .pk-download-link:hover {
+            color: var(--color-accent-hover);
+        }
+
+        @media (max-width: 768px) {
+            .pk-media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Screenshots strip */
+        .pk-screenshots {
+            display: flex;
+            gap: var(--space-sm);
+            overflow-x: auto;
+            padding: var(--space-md) 0;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .pk-screenshots img {
+            height: 400px;
+            width: auto;
+            border-radius: var(--radius);
+            border: 1px solid var(--color-border);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .pk-screenshots img {
+                height: 300px;
+            }
+        }
+
+        /* Contact links */
+        .pk-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .pk-contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md);
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .pk-contact-item:hover {
+            border-color: var(--color-accent);
+            color: var(--color-text-primary);
+        }
+
+        .pk-contact-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            flex-shrink: 0;
+        }
+
+        .pk-contact-text {
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .pk-contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Links section */
+        .pk-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        .pk-link-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--color-bg-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: 999px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .pk-link-pill:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        /* Blockquote style for developer bio */
+        .pk-bio {
+            border-left: 3px solid var(--color-accent);
+            padding-left: var(--space-md);
+            margin: var(--space-lg) 0;
+        }
+
+        .pk-bio p {
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light" id="navbar">
+        <div class="container navbar-inner">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" width="32" height="32" alt="Charty">
+                <span>Charty</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="press-kit.html">Press Kit</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#114;&#097;&#112;&#112;&#116;&#111;&#114;&#046;&#100;&#101;&#118;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pk-header">
+        <div class="container">
+            <img src="assets/img/logo.png" alt="Charty app icon" class="pk-header-icon">
+            <h1 class="pk-header-title">Charty for Shortcuts</h1>
+            <p class="pk-header-tagline">The Charting Engine for Apple Shortcuts</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="pk-content">
+        <div class="container pk-container">
+
+            <!-- Table of Contents -->
+            <nav class="pk-toc">
+                <h2>Press Kit</h2>
+                <ul>
+                    <li><a href="#press-release">Press Release</a></li>
+                    <li><a href="#fact-sheet">Fact Sheet</a></li>
+                    <li><a href="#pricing">Pricing &amp; Transition</a></li>
+                    <li><a href="#about">About the Developer</a></li>
+                    <li><a href="#media">Media Assets</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Press Release -->
+            <div class="pk-section" id="press-release">
+                <h2 class="pk-section-title">Press Release</h2>
+
+                <h3>Charty 2.0: The Charting Engine for Apple Shortcuts Gets Its Biggest Update in Six Years</h3>
+                <p><strong>Complete ground-up rebuild brings more beautiful charts and better widgets, in a modernized experience to nearly 80,000 users</strong></p>
+
+                <p><strong>Rio de Janeiro, June 23, 2026</strong> — Charty, the iOS app that lets users create and customize charts directly from Apple Shortcuts, today is getting updated to version 2.0 — a complete rebuild representing the app's most significant update since its original release in May 2020.</p>
+
+                <p>Built from scratch with SwiftUI, Swift Charts, and AppIntents, Charty 2.0 replaces the app's entire foundation to deliver a more polished charting experience, more reliable widgets, and a modern architecture designed for faster future development.</p>
+
+                <p>Since launching six years ago, Charty has been downloaded more than 79,500 times, carving out a unique niche as the go-to charting companion for the Shortcuts automation community. Version 2.0 arrives after an open beta that began February 5, 2026, with more than 300 testers providing feedback.</p>
+
+                <h3>What's new in Charty 2.0</h3>
+                <ul>
+                    <li>Fully rebuilt on SwiftUI using Apple's Swift Charts for gorgeous and customizable chart rendering</li>
+                    <li>More reliable widgets — the most requested fix from the community</li>
+                    <li>New color themes and gradient support for richer chart styling</li>
+                    <li>Revamped Tutorials tab with downloadable example shortcuts and integrations with apps like Data Jar, Toolbox Pro, and Reminders</li>
+                    <li>Seamless migration of existing shortcuts and charts</li>
+                </ul>
+
+                <h3>Pricing &amp; transition</h3>
+                <p>Charty 2.0 moves to a subscription model at $0.99/month or $9.99/year. Users who previously purchased Charty Premium retain full access to all features in 2.0 at no additional cost. Subscription-exclusive features will begin rolling out in version 2.1.</p>
+
+                <h3>About the developer</h3>
+                <p>Charty is built and maintained by Rodrigo Araujo, an independent developer based in Rio de Janeiro, Brazil. What started as a personal tool for the Shortcuts community has grown into a six-year project downloaded nearly 80,000 times — all as a solo endeavor.</p>
+
+                <p><strong>Press contact:</strong> <a href="mailto:contact@rapptor.dev">contact@rapptor.dev</a></p>
+            </div>
+
+            <!-- Fact Sheet -->
+            <div class="pk-section" id="fact-sheet">
+                <h2 class="pk-section-title">Fact Sheet</h2>
+
+                <div class="pk-detail-grid">
+                    <span class="pk-detail-label">App name</span>
+                    <span class="pk-detail-value">Charty for Shortcuts — The Charting Engine for Apple Shortcuts</span>
+
+                    <span class="pk-detail-label">Version</span>
+                    <span class="pk-detail-value">2.0</span>
+
+                    <span class="pk-detail-label">Launch date</span>
+                    <span class="pk-detail-value">June 23, 2026</span>
+
+                    <span class="pk-detail-label">Platform</span>
+                    <span class="pk-detail-value">iOS</span>
+
+                    <span class="pk-detail-label">Developer</span>
+                    <span class="pk-detail-value">Rodrigo Araujo (independent)</span>
+
+                    <span class="pk-detail-label">Location</span>
+                    <span class="pk-detail-value">Rio de Janeiro, Brazil</span>
+
+                    <span class="pk-detail-label">Contact</span>
+                    <span class="pk-detail-value"><a href="mailto:contact@rapptor.dev">contact@rapptor.dev</a></span>
+                </div>
+
+                <h3>What is Charty?</h3>
+                <p>Charty lets users create, customize, and display charts directly from Apple Shortcuts. It's the go-to charting companion for the iOS automation community, connecting with apps like Data Jar, Toolbox Pro, Reminders, and web APIs to turn data into visuals — all without leaving the Shortcuts ecosystem.</p>
+
+                <div class="pk-stats">
+                    <div class="pk-stat">
+                        <div class="pk-stat-number">79,500+</div>
+                        <div class="pk-stat-label">Downloads</div>
+                    </div>
+                    <div class="pk-stat">
+                        <div class="pk-stat-number">6</div>
+                        <div class="pk-stat-label">Years of development</div>
+                    </div>
+                    <div class="pk-stat">
+                        <div class="pk-stat-number">300+</div>
+                        <div class="pk-stat-label">Beta testers for 2.0</div>
+                    </div>
+                    <div class="pk-stat">
+                        <div class="pk-stat-number">1</div>
+                        <div class="pk-stat-label">Indie developer</div>
+                    </div>
+                </div>
+
+                <h3>What's new in 2.0</h3>
+                <ul>
+                    <li>Complete rebuild on SwiftUI, Swift Charts, and AppIntents</li>
+                    <li>Gorgeous, customizable chart rendering powered by Apple's Swift Charts API</li>
+                    <li>More reliable widgets</li>
+                    <li>New color themes and gradient support</li>
+                    <li>Revamped Tutorials tab with downloadable example shortcuts and third-party app integrations</li>
+                    <li>Seamless migration of existing shortcuts and charts</li>
+                </ul>
+            </div>
+
+            <!-- Pricing -->
+            <div class="pk-section" id="pricing">
+                <h2 class="pk-section-title">Pricing &amp; Transition</h2>
+
+                <ul>
+                    <li><strong>$0.99/month</strong> or <strong>$9.99/year</strong></li>
+                    <li>Previous Charty Premium purchasers keep full access to all 2.0 features at no cost</li>
+                    <li>Subscription-exclusive features begin in version 2.1</li>
+                </ul>
+            </div>
+
+            <!-- About the Developer -->
+            <div class="pk-section" id="about">
+                <h2 class="pk-section-title">About the Developer</h2>
+
+                <div class="pk-bio">
+                    <p>I'm Rodrigo Araujo, an independent developer based in Rio de Janeiro, Brazil. I created Charty in 2020 to bring charting capabilities to Apple's Shortcuts ecosystem — a gap no other app was filling at the time.</p>
+
+                    <p>What started as a focused utility has grown into a six-year project with nearly 80,000 downloads, built and maintained entirely on my own. Charty 2.0 is the app's most ambitious milestone: a complete ground-up rebuild using modern Apple frameworks to set the foundation for years of future development.</p>
+
+                    <p>I take a community-first approach to building Charty, engaging directly with users on Reddit, Mastodon, and Bluesky. I ran an open beta with over 300 testers before launch, and designed the 2.0 transition to respect the people who supported Charty early on — existing Premium purchasers keep full access at no extra cost, with subscription-only features starting in 2.1.</p>
+                </div>
+            </div>
+
+            <!-- Media Assets -->
+            <div class="pk-section" id="media">
+                <h2 class="pk-section-title">Media Assets</h2>
+
+                <div class="pk-media-grid">
+                    <div class="pk-media-item">
+                        <img src="assets/press-kit/Hero 1.png" alt="Charty 2.0 hero image — before and after comparison">
+                        <div class="pk-media-caption">
+                            <span>Hero Image 1</span>
+                            <a href="assets/press-kit/Hero 1.png" download class="pk-download-link">Download</a>
+                        </div>
+                    </div>
+                    <div class="pk-media-item">
+                        <img src="assets/press-kit/Hero 2.png" alt="Charty 2.0 hero image — chart showcase">
+                        <div class="pk-media-caption">
+                            <span>Hero Image 2</span>
+                            <a href="assets/press-kit/Hero 2.png" download class="pk-download-link">Download</a>
+                        </div>
+                    </div>
+                    <div class="pk-media-item">
+                        <img src="assets/press-kit/icon_light.png" alt="Charty app icon — light">
+                        <div class="pk-media-caption">
+                            <span>App Icon (Light)</span>
+                            <a href="assets/press-kit/icon_light.png" download class="pk-download-link">Download</a>
+                        </div>
+                    </div>
+                    <div class="pk-media-item">
+                        <img src="assets/press-kit/icon_dark.png" alt="Charty app icon — dark">
+                        <div class="pk-media-caption">
+                            <span>App Icon (Dark)</span>
+                            <a href="assets/press-kit/icon_dark.png" download class="pk-download-link">Download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Screenshots</h3>
+                <div class="pk-screenshots">
+                    <img src="assets/press-kit/screenshots/iPhone 1.png" alt="Charty screenshot 1">
+                    <img src="assets/press-kit/screenshots/iPhone 2.png" alt="Charty screenshot 2">
+                    <img src="assets/press-kit/screenshots/iPhone 3.png" alt="Charty screenshot 3">
+                    <img src="assets/press-kit/screenshots/iPhone 4.png" alt="Charty screenshot 4">
+                    <img src="assets/press-kit/screenshots/iPhone 5.png" alt="Charty screenshot 5">
+                    <img src="assets/press-kit/screenshots/iPhone 6.png" alt="Charty screenshot 6">
+                    <img src="assets/press-kit/screenshots/iPhone 7.png" alt="Charty screenshot 7">
+                    <img src="assets/press-kit/screenshots/iPhone 8.png" alt="Charty screenshot 8">
+                    <img src="assets/press-kit/screenshots/iPhone 9.png" alt="Charty screenshot 9">
+                    <img src="assets/press-kit/screenshots/iPhone 10.png" alt="Charty screenshot 10">
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="pk-section" id="links">
+                <h2 class="pk-section-title">Links</h2>
+
+                <div class="pk-links">
+                    <a href="https://testflight.apple.com/join/KEVbWYAB" class="pk-link-pill">TestFlight</a>
+                    <a href="https://chartyios.app" class="pk-link-pill">Website</a>
+                    <a href="https://apps.apple.com/app/id1494386093" class="pk-link-pill">App Store</a>
+                </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="pk-section" id="contact">
+                <h2 class="pk-section-title">Contact</h2>
+
+                <div class="pk-contact-grid">
+                    <a href="mailto:contact@rapptor.dev" class="pk-contact-item">
+                        <svg class="pk-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span class="pk-contact-text">contact@rapptor.dev</span>
+                    </a>
+                    <a href="https://indieapps.space/@charty" class="pk-contact-item" rel="me">
+                        <svg class="pk-contact-icon" viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.547c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054 19.648 19.648 0 0 0 4.581.536h.342c1.682 0 3.375-.093 5.036-.364 2.478-.405 4.636-1.667 4.864-5.059.016-.124.042-.477.042-.477.042-.4.198-2.803-.042-4.29zm-3.587 7.042h-2.39V7.28c0-1.274-.546-1.922-1.636-1.922-1.206 0-1.811.768-1.811 2.287v2.82h-2.376V7.645c0-1.52-.606-2.287-1.812-2.287-1.09 0-1.636.648-1.636 1.922v5.075H5.63V7.082c0-1.274.327-2.287.98-3.04.675-.752 1.56-1.137 2.657-1.137 1.27 0 2.23.484 2.868 1.45l.617 1.028.618-1.028c.637-.966 1.598-1.45 2.867-1.45 1.097 0 1.982.385 2.657 1.137.653.753.98 1.766.98 3.04v5.273z"/></svg>
+                        <span class="pk-contact-text">@charty@indieapps.space</span>
+                    </a>
+                    <a href="https://bsky.app/profile/chartyios.app" class="pk-contact-item">
+                        <svg class="pk-contact-icon" viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.62 3.494 6.22 3.146-4.078.642-7.187 2.196-2.844 6.107 4.748 3.8 6.564-1.412 7.58-4.216.127-.349.187-.515.42-.515.233 0 .293.166.42.515 1.016 2.804 2.832 8.016 7.58 4.216 4.343-3.911 1.234-5.465-2.844-6.107 2.6.348 5.435-.52 6.22-3.146C23.622 9.418 24 4.458 24 3.768c0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+                        <span class="pk-contact-text">@chartyios.app</span>
+                    </a>
+                    <a href="https://www.reddit.com/r/chartyapp" class="pk-contact-item">
+                        <svg class="pk-contact-icon" viewBox="0 0 24 24"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.058c0 1.193.975 2.163 2.174 2.163 1.198 0 2.172-.97 2.172-2.163s-.975-2.164-2.172-2.164c-.92 0-1.704.574-2.021 1.379l-4.329-1.015c-.189-.046-.381.063-.44.249l-1.654 5.207c-2.838.034-5.409.798-7.3 2.025-.474-.438-1.103-.712-1.799-.712C1.192 9.134 0 10.32 0 11.779c0 .974.55 1.824 1.35 2.27-.083.39-.127.792-.127 1.2 0 4.286 4.917 7.751 10.977 7.751s10.977-3.465 10.977-7.751c0-.399-.042-.793-.122-1.175.8-.443 1.345-1.29 1.345-2.295zM6.92 13.94c0-.81.662-1.468 1.479-1.468.816 0 1.478.657 1.478 1.468 0 .81-.662 1.467-1.478 1.467-.817 0-1.479-.657-1.479-1.467zm8.271 4.305c-.944.924-2.281 1.254-3.376 1.254h-.01c-1.095 0-2.432-.33-3.376-1.254-.147-.144-.147-.38 0-.524.147-.145.386-.145.533 0 .753.738 1.876 1.018 2.843 1.018h.01c.967 0 2.09-.28 2.843-1.018.147-.145.386-.145.533 0 .147.144.147.38 0 .524zm-.2-2.838c-.817 0-1.479-.657-1.479-1.467 0-.811.662-1.468 1.479-1.468.816 0 1.478.657 1.478 1.468 0 .81-.662 1.467-1.478 1.467z"/></svg>
+                        <span class="pk-contact-text">r/ChartyApp</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="assets/img/logo.png" width="32" height="32" alt="Charty">
+                <span>Charty</span>
+            </div>
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="blog.html">Blog</a>
+                <a href="press-kit.html">Press Kit</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-use.html">Terms of Use</a>
+                <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#114;&#097;&#112;&#112;&#116;&#111;&#114;&#046;&#100;&#101;&#118;">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://bsky.app/profile/chartyios.app" aria-label="Charty on Bluesky">
+                    <svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.62 3.494 6.22 3.146-4.078.642-7.187 2.196-2.844 6.107 4.748 3.8 6.564-1.412 7.58-4.216.127-.349.187-.515.42-.515.233 0 .293.166.42.515 1.016 2.804 2.832 8.016 7.58 4.216 4.343-3.911 1.234-5.465-2.844-6.107 2.6.348 5.435-.52 6.22-3.146C23.622 9.418 24 4.458 24 3.768c0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
-                    <span class="navbar-toggler-icon">   
-                        <i class="fas fa-bars" style="font-size:28px;"></i>
-                    </span>                    
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="tutorials.html">Tutorials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="examples.html">Examples</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="themes.html">Themes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="faq.html">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="press-kit.html">Press Kit</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="privacy-policy.html">Privacy Policy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <a href="https://indieapps.space/@charty" aria-label="Charty on Mastodon" rel="me">
+                    <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.547c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054 19.648 19.648 0 0 0 4.581.536h.342c1.682 0 3.375-.093 5.036-.364 2.478-.405 4.636-1.667 4.864-5.059.016-.124.042-.477.042-.477.042-.4.198-2.803-.042-4.29zm-3.587 7.042h-2.39V7.28c0-1.274-.546-1.922-1.636-1.922-1.206 0-1.811.768-1.811 2.287v2.82h-2.376V7.645c0-1.52-.606-2.287-1.812-2.287-1.09 0-1.636.648-1.636 1.922v5.075H5.63V7.082c0-1.274.327-2.287.98-3.04.675-.752 1.56-1.137 2.657-1.137 1.27 0 2.23.484 2.868 1.45l.617 1.028.618-1.028c.637-.966 1.598-1.45 2.867-1.45 1.097 0 1.982.385 2.657 1.137.653.753.98 1.766.98 3.04v5.273z"/></svg>
+                </a>
+                <a href="https://www.reddit.com/r/chartyapp" aria-label="Charty on Reddit">
+                    <svg viewBox="0 0 24 24"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.058c0 1.193.975 2.163 2.174 2.163 1.198 0 2.172-.97 2.172-2.163s-.975-2.164-2.172-2.164c-.92 0-1.704.574-2.021 1.379l-4.329-1.015c-.189-.046-.381.063-.44.249l-1.654 5.207c-2.838.034-5.409.798-7.3 2.025-.474-.438-1.103-.712-1.799-.712C1.192 9.134 0 10.32 0 11.779c0 .974.55 1.824 1.35 2.27-.083.39-.127.792-.127 1.2 0 4.286 4.917 7.751 10.977 7.751s10.977-3.465 10.977-7.751c0-.399-.042-.793-.122-1.175.8-.443 1.345-1.29 1.345-2.295zM6.92 13.94c0-.81.662-1.468 1.479-1.468.816 0 1.478.657 1.478 1.468 0 .81-.662 1.467-1.478 1.467-.817 0-1.479-.657-1.479-1.467zm8.271 4.305c-.944.924-2.281 1.254-3.376 1.254h-.01c-1.095 0-2.432-.33-3.376-1.254-.147-.144-.147-.38 0-.524.147-.145.386-.145.533 0 .753.738 1.876 1.018 2.843 1.018h.01c.967 0 2.09-.28 2.843-1.018.147-.145.386-.145.533 0 .147.144.147.38 0 .524zm-.2-2.838c-.817 0-1.479-.657-1.479-1.467 0-.811.662-1.468 1.479-1.468.816 0 1.478.657 1.478 1.468 0 .81-.662 1.467-1.478 1.467z"/></svg>
+                </a>
             </div>
-        </nav>
- 
-        <!-- Top content -->
-        <div id="main-content">
-            <div class="container my-4 py-4">
-                <div class="row pt-4 my-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h1>Charty's Press Kit</h1>
-                    </div>
-                </div>
-                <div class="row text-left pt-4 my-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <p>Download the full press kit with high resolution hero images, screenshots and icons:</p>
-                        <p><strong>Current version:</strong> <a href="https://www.dropbox.com/s/uha2ms5gknwto8l/Charty14-Press-Kit.zip?dl=0">Version 1.4</a> (69,7 MB)</p>
-                        <small>
-                            <p class="my-0">Older versions</p>
-                            <ul>
-                                <li><a href="https://www.dropbox.com/s/eqnprgwgbib6hct/Charty13-Press-Kit.zip?dl=0">Version 1.3</a> (67,8 MB)</li>
-                                <li><a href="https://www.dropbox.com/s/pqbrinr70qj40co/Charty-Press-Kit.zip?dl=0">Version 1.0</a> (103,1 MB)</li>
-                            </ul>
-                        </small>
-                    </div>
-                </div>
-
-                <!-- DETAILS -->
-
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h3>Details</h3>
-                    </div>
-                </div>
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>App Store URL</strong></h5>
-                        <p><a href="https://apps.apple.com/app/id1494386093">https://apps.apple.com/app/id1494386093</a></p>
-                        <!-- <p><a href="https://itunes.apple.com/app/charty-for-shortcuts/id1494386093">https://itunes.apple.com/app/charty-for-shortcuts/id1494386093</a></p> -->
-                    </div>
-                </div>
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>Pricing</strong></h5>
-                        <p>Charty is free to download with iOS 14 Widgets support and 5 Shortcuts' actions: <strong>New Chart</strong>, <strong>Add Series To Chart</strong>, <strong>Style Chart</strong>, <strong>Delete Chart</strong> and <strong>Get Information From All Chart</strong>.</p>
-                        <p class="mb-0">A one-time in-app purchase unlocks:</p>
-                        <ul>
-                            <li>19 extra Shortcuts' actions: <strong>New Chart With Series</strong>, <strong>Add Series From CSV</strong>, <strong>Export Chart As Image</strong>, <strong>Copy Chart To Clipboard</strong>, <strong>Style Axis</strong>, <strong>Style Bar Series</strong>, <strong>Style Line Series</strong>, <strong>Style Pie/Donut Series</strong>, <strong>Style Ring Series</strong>, <strong>Style Scatter Series</strong>, <strong>Add Average</strong>, <strong>Add Moving Average</strong>, <strong>Apply Quick Style</strong>, <strong>Add Custom Theme</strong>, <strong>Group Data</strong>, <strong>Filter Data</strong>, <strong>Accumulate Values</strong>, <strong>Update Widgets</strong> and <strong>Delete Series</strong></li>
-                            <li>Series styling and customisation (line width, stacked bars, markers size, series' colors, etc)</li>
-                            <li>Axis styling and label customisation (date time format, custom labels, etc)</li>
-                            <li><a href="https://chartyios.app/themes.html">Custom themes</a></li>
-                            <li>Unlimited series per chart</li>
-                            <li>31+ extra icons</li>
-                        </ul>
-                        <p>This in-app purchase costs <strong>$4.99</strong>.</p>
-                    </div>
-                </div>
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>Developer</strong></h5>
-                        <p>Rodrigo Araújo</p>
-                    </div>
-                </div>
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>Requirements</strong></h5>
-                        <p>iOS or iPadOS 14.0</p>
-                    </div>
-                </div>
-
-                <!-- ICON -->
-
-                <div class="row text-left my-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h3 class="text-center">Icon</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <a href="assets/img/icon-rounded.png"><img src="assets/img/icon-rounded.png" width="256"/></a>
-                    </div>
-                </div>
-
-                <!-- HERO IMAGES -->
-
-                <div class="row text-left my-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h3 class="text-center">Hero images</h3>
-                    </div>
-                </div>
-
-                <div class="row text-left mt-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5 class="text-center"><strong>Charty 1.4</strong></h5>
-                    </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty14_hero1.png"><img src="assets/img/hero/charty14_hero1.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty14_hero2.png"><img src="assets/img/hero/charty14_hero2.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty14_hero3_dark.png"><img src="assets/img/hero/charty14_hero3_dark.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty14_hero3_light.png"><img src="assets/img/hero/charty14_hero3_light.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty14_hero4_features.png"><img src="assets/img/hero/charty14_hero4_features.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty14_hero5_tutorials.png"><img src="assets/img/hero/charty14_hero5_tutorials.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                </div>
-
-
-                <div class="row text-left mt-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5 class="text-center"><strong>Charty 1.3</strong></h5>
-                    </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col-6">
-                        <a href="assets/img/hero/charty13_hero_dark.jpg"><img src="assets/img/hero/charty13_hero_dark.jpg" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                    <div class="col-6">
-                        <a href="assets/img/hero/widget_hero_dark.jpg"><img src="assets/img/hero/widget_hero_dark.jpg" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                </div>
-
-                <div class="row text-left mt-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5 class="text-center"><strong>Charty 1.0</strong></h5>
-                    </div>
-                </div>
-                <div class="row my-2">
-                    <div class="col-6">
-                        <a href="assets/img/hero/hero_light_mode.jpg"><img src="assets/img/hero/hero_light_mode.jpg" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                    <div class="col-6">
-                        <a href="assets/img/hero/iPad_hero_dark_mode.png"><img src="assets/img/hero/iPad_hero_dark_mode.png" class="img-fluid" style="border-radius: 2%" alt=""></a>
-                    </div>
-                </div>
-                <!-- APP STORE SCREENSHOTS -->
-
-                <div class="row text-left my-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h3>App Store Screenshots</h3>
-                    </div>
-                </div>
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>iPhone</strong></h5>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 1.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 1.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 2.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 2.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 3.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 3.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 4.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 4.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 5.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 5.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 6.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 6.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 7.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 7.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 8.png"><img src="assets/img/screenshots/iPhone X/iPhone 11 Pro Max 8.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                </div>
-
-                <div class="row text-left mt-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>iPad</strong></h5>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-0 col-md-2"></div> 
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 1.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 1.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 2.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 2.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-0 col-md-2"></div> 
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 3.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 3.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 4.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 4.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-0 col-md-2"></div> 
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 5.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 5.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 6.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 6.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-3 col-md-4"></div> 
-                    <div class="col-6 col-md-4">
-                        <a href="assets/img/screenshots/iPad/12.9″ iPad Pro 7.png"><img src="assets/img/screenshots/iPad/12.9″ iPad Pro 7.png" class="img-fluid" style="border-radius: 10px"/></a>
-                    </div>
-                </div>
-
-
-                <!-- CHARTY INFO -->
-
-                <div class="row text-left mt-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h3>About Charty</h3>
-                    </div>
-                </div>
-
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <p>Charty was created to provide a way for users with a tool to visualize any kind of data they have on their iPhones or iPads.</p>
-                        <p>With that in mind, the obvious choice to support any kind of data was to do it through Apple's Shortcuts app, as it allows users to create powerful algorithms that extract, process and create data.</p>
-                        <p>By using simple actions provided by default on Shortcuts, users can collect data from anything in their lives, be it sleeping patterns, distances walked, calories burned, heart rate variation, pages read on books, etc. And, using Shortcuts, they can process that data and feed it to Charty, which plots it in beautiful ways and generates images that can be easily shared or used on presentations or documents.</p>
-                        <p>Charty can also be paired with other great Shortcuts Utility Apps like <a href="https://toolboxpro.app">Toolbox Pro</a>, allowing users to extract even more data (like Workouts) and process them with more powerful actions. <a href="https://datajar.app">DataJar</a> is another great companion for Charty, as it gives users a complete framework to store and access data. Also, to organize all the shortcuts created, users can use <a href="http://launchcuts.com/">LaunchCuts</a>, which provides folders and many other functionalities to organize shortcuts.</p>
-                    </div>
-                </div>
-
-                <!-- DEVELOPER INFO -->
-
-                <div class="row text-left mt-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h3>About me</h3>
-                    </div>
-                </div>
-
-                <div class="row text-left">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <p>Hi 👋🏻!</p>
-                        <p>My name is Rodrigo Araújo and I'm a Computer Engineer from Natal, Brazil. Charty is my second app, but it's far more ambitious than my first one (<a href="https://chatstats.app">ChatStats</a>).</p>
-                        <p>I also have a masters in Petroleum Engineering and, by day, I work in the oil industry as a Reservoir Engineer, specifically in the Formation Evaluation area.</p>
-                        <p>Visualizing data has been a long passion for me, and I've always wanted a simple way to plot charts in iOS. Charty scratches many itches I had in the past like monitoring Apple Watch's badges progress, or checking if I'm on track to meet my reading goals.</p>
-                        <p>The idea for Charty came to me while I was testing Alex Hay's amazing <a href="https://toolboxpro.app">Toolbox Pro</a>. After seeing what he made possible, I knew I had to try making an app to visualize data.</p>
-                        <p>This endeavour wouldn't have been possible without the loving patience of my dear wife (love you, Mah! ♥️), the help of my brother, and the help of the 2200 beta testers who tested, crashed, found bugs and sent feedbacks. Thank you!</p>
-                    </div>
-                </div>
-
-                <!-- ALTERNATE ICONS -->
-
-                <div class="row text-left my-4">
-                    <div class="col-2 col-md-0"></div> 
-                    <div class="col-12 col-md-8">
-                        <h5><strong>Alternate icons</strong></h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-2-rounded@2x.png"><img src="assets/img/alternate-icons/icon-2-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-3-rounded@2x.png"><img src="assets/img/alternate-icons/icon-3-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-4-rounded@2x.png"><img src="assets/img/alternate-icons/icon-4-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-5-rounded@2x.png"><img src="assets/img/alternate-icons/icon-5-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-6-rounded@2x.png"><img src="assets/img/alternate-icons/icon-6-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-7-rounded@2x.png"><img src="assets/img/alternate-icons/icon-7-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-8-rounded@2x.png"><img src="assets/img/alternate-icons/icon-8-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-9-rounded@2x.png"><img src="assets/img/alternate-icons/icon-9-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-10-rounded@2x.png"><img src="assets/img/alternate-icons/icon-10-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-11-rounded@2x.png"><img src="assets/img/alternate-icons/icon-11-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-12-rounded@2x.png"><img src="assets/img/alternate-icons/icon-12-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-13-rounded@2x.png"><img src="assets/img/alternate-icons/icon-13-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-14-rounded@2x.png"><img src="assets/img/alternate-icons/icon-14-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-15-rounded@2x.png"><img src="assets/img/alternate-icons/icon-15-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-16-rounded@2x.png"><img src="assets/img/alternate-icons/icon-16-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-17-rounded@2x.png"><img src="assets/img/alternate-icons/icon-17-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-18-rounded@2x.png"><img src="assets/img/alternate-icons/icon-18-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-19-rounded@2x.png"><img src="assets/img/alternate-icons/icon-19-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-20-rounded@2x.png"><img src="assets/img/alternate-icons/icon-20-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-21-rounded@2x.png"><img src="assets/img/alternate-icons/icon-21-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-22-rounded@2x.png"><img src="assets/img/alternate-icons/icon-22-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-23-rounded@2x.png"><img src="assets/img/alternate-icons/icon-23-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-24-rounded@2x.png"><img src="assets/img/alternate-icons/icon-24-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-25-rounded@2x.png"><img src="assets/img/alternate-icons/icon-25-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-26-rounded@2x.png"><img src="assets/img/alternate-icons/icon-26-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-27-rounded@2x.png"><img src="assets/img/alternate-icons/icon-27-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-28-rounded@2x.png"><img src="assets/img/alternate-icons/icon-28-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-0 col-md-2"></div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-29-rounded@2x.png"><img src="assets/img/alternate-icons/icon-29-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-30-rounded@2x.png"><img src="assets/img/alternate-icons/icon-30-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-31-rounded@2x.png"><img src="assets/img/alternate-icons/icon-31-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                    <div class="col-3 col-md-2">
-                        <a href="assets/img/alternate-icons/icon-32-rounded@2x.png"><img src="assets/img/alternate-icons/icon-32-rounded@2x.png" class="img-fluid"/></a>
-                    </div>
-                </div>
-
-            </div>            
+            <p class="footer-credit">Developed by <a href="https://mastodon.social/@rmaraujo" rel="me">Rodrigo Araujo</a> at <a href="https://rapptor.dev">Rapptor</a></p>
         </div>
+    </footer>
 
-        <!-- Footer -->
-        <div id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p class="m-0 p-0">
-                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
-                        </p>
-                        <p class="m-0 p-0">
-                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Javascript -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
-        <!-- <script src="assets/js/wow.min.js"></script> -->
-        <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
-        <!-- <script src="assets/js/waypoints.min.js"></script> -->
-        <script src="assets/js/scripts.js"></script>
-    </body>
+    <script src="assets/js/scripts-v2.js"></script>
+</body>
 </html>

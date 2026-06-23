@@ -1,169 +1,132 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140139432-2"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+<head>
 
-        gtag('config', 'UA-140139432-2');
-        </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-itunes-app" content="app-id=1494386093">
 
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="apple-itunes-app" content="app-id=1494386093">
+    <title>Blog – Charty</title>
+    <meta name="description" content="Release notes and updates for Charty, the iOS app that lets you create charts from Apple Shortcuts.">
 
-        <title>Charty – Create charts from Shortcuts</title>
- 
-        <!-- CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog – Charty">
+    <meta property="og:description" content="Release notes and updates for Charty.">
+    <meta property="og:image" content="https://chartyios.app/assets/img/og/og_v2.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://chartyios.app/blog.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
 
-        <!-- Favicon and touch icons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-    </head>
- 
-    <body>
-        <!-- Top menu -->
-        <nav class="navbar fixed-top navbar-expand-md">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.png" width="32" height="32" class="d-inline-block align-top" alt="">
-                    <span>Charty</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <!-- <span class="navbar-toggler-icon"></span> -->
-                    <span class="navbar-toggler-icon">   
-                        <i class="fas fa-bars" style="font-size:28px;"></i>
-                    </span>                    
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="tutorials.html">Tutorials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="examples.html">Examples</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="themes.html">Themes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="faq.html">FAQ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="press-kit.html">Press Kit</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="privacy-policy.html">Privacy Policy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link scroll-link" href="mailto:&#114;&#109;&#097;&#114;&#097;&#117;&#106;&#111;&#064;&#109;&#101;&#046;&#099;&#111;&#109;">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <link rel="canonical" href="https://chartyios.app/blog.html">
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0F0F1A" media="(prefers-color-scheme: dark)">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,600,700,900" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles-v2.css">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/site.webmanifest">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light" id="navbar">
+        <div class="container navbar-inner">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/img/logo.png" width="32" height="32" alt="Charty">
+                <span>Charty</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="press-kit.html">Press Kit</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-of-use.html">Terms of Use</a></li>
+                <li><a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#114;&#097;&#112;&#112;&#116;&#111;&#114;&#046;&#100;&#101;&#118;">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="faq-header">
+        <div class="container">
+            <h1 class="faq-header-title">Blog</h1>
+            <p class="faq-header-subtitle">Release notes and updates</p>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="section faq-content">
+        <div class="container faq-container">
+            <div class="faq-item">
+                <span class="blog-date">June 11, 2026</span>
+                <h3><a href="blog/charty20aphrodite.html">Charty 2.0 — Aphrodite</a></h3>
             </div>
-        </nav>
- 
-        <!-- Top content -->
-        <div id="main-content">
-            <div class="container my-4 py-4">
-                <div class="row pt-4 my-4">
-                    <div class="col-0 col-md-2"></div> 
-                    <div class="col-12 col-md-8">
-                        <small><em>April 30, 2021</em></small>
-                        <br><span class="badge bg-shortcut-5" style="color: white;">Release</span>
-                        <a href="blog/charty14theseus.html" style="color: var(--page-title);">
-                            <h3><strong>Charty 1.4 - Theseus</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>September 9, 2020</em></small>
-                        <br><span class="badge bg-shortcut-5" style="color: white;">Release</span>
-                        <a href="" style="color: var(--page-title);">
-                            <h3><strong>Charty 1.3 - Hephaestus</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>August 8, 2020</em></small>
-                        <br><span class="badge bg-shortcut-5" style="color: white;">Release</span>
-                        <a href="blog/charty12hermes.html" style="color: var(--page-title);">
-                            <h3><strong>Charty 1.2 - Hermes</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>June 23, 2020</em></small>
-                        <a href="tutorials/scatter_swarm.html" style="color: var(--page-title);">
-                            <br><span class="badge bg-shortcut-8" style="color: white;">Tutorial</span>
-                            <h3><strong>Creating swarms with scatter plots</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>June 16, 2020</em></small>
-                        <br><span class="badge bg-shortcut-8" style="color: white;">Tutorial</span>
-                        <a href="tutorials/combine_charts.html" style="color: var(--page-title);">
-                            <h3><strong>Combining charts for richer visualizations</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>June 4, 2020</em></small>
-                        <br><span class="badge bg-shortcut-5" style="color: white;">Release</span>
-                        <a href="blog/charty11iris.html" style="color: var(--page-title);">
-                            <h3><strong>Charty 1.1 - Iris</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>May 1, 2020</em></small>
-                        <br><span class="badge bg-shortcut-8" style="color: white;">Tutorial</span>
-                        <a href="tutorials/custom_x_labels.html" style="color: var(--page-title);">
-                            <h3><strong>How to add custom labels to an axis</strong></h3>
-                        </a>
-                        <hr class="my-4">
-                        <small><em>April 27, 2020</em></small>
-                        <br><span class="badge bg-shortcut-8" style="color: white;">Tutorial</span>
-                        <a href="tutorials/csv.html" style="color: var(--page-title);">
-                            <h3><strong>How to plot data from a CSV file</strong></h3>
-                        </a>
-                    </div>
-                </div>
+            <div class="faq-item">
+                <span class="blog-date">April 30, 2021</span>
+                <h3><a href="blog/charty14theseus.html">Charty 1.4 — Theseus</a></h3>
+            </div>
+            <div class="faq-item">
+                <span class="blog-date">September 9, 2020</span>
+                <h3><a href="blog/charty13hephaestus.html">Charty 1.3 — Hephaestus</a></h3>
+            </div>
+            <div class="faq-item">
+                <span class="blog-date">August 8, 2020</span>
+                <h3><a href="blog/charty12hermes.html">Charty 1.2 — Hermes</a></h3>
+            </div>
+            <div class="faq-item">
+                <span class="blog-date">June 4, 2020</span>
+                <h3><a href="blog/charty11iris.html">Charty 1.1 — Iris</a></h3>
             </div>
         </div>
+    </section>
 
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <p class="m-0 p-0">
-                            Developed by <a href="https://twitter.com/rodrigoaraujo">Rodrigo Araújo</a>
-                        </p>
-                        <p class="m-0 p-0">
-                            <a href="https://twitter.com/chartyios"><i class="fab fa-twitter"></i>chartyios</a>
-                        </p>
-                    </div>
-                </div>
+    <footer class="footer" id="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <img src="assets/img/logo.png" width="32" height="32" alt="Charty">
+                <span>Charty</span>
             </div>
-        </footer>
+            <div class="footer-links">
+                <a href="faq.html">FAQ</a>
+                <a href="blog.html">Blog</a>
+                <a href="press-kit.html">Press Kit</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-use.html">Terms of Use</a>
+                <a href="mailto:&#099;&#111;&#110;&#116;&#097;&#099;&#116;&#064;&#114;&#097;&#112;&#112;&#116;&#111;&#114;&#046;&#100;&#101;&#118;">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://bsky.app/profile/chartyios.app" aria-label="Charty on Bluesky">
+                    <svg viewBox="0 0 24 24"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.785 2.627 3.62 3.494 6.22 3.146-4.078.642-7.187 2.196-2.844 6.107 4.748 3.8 6.564-1.412 7.58-4.216.127-.349.187-.515.42-.515.233 0 .293.166.42.515 1.016 2.804 2.832 8.016 7.58 4.216 4.343-3.911 1.234-5.465-2.844-6.107 2.6.348 5.435-.52 6.22-3.146C23.622 9.418 24 4.458 24 3.768c0-.69-.139-1.861-.902-2.203-.659-.3-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8z"/></svg>
+                </a>
+                <a href="https://indieapps.space/@charty" aria-label="Charty on Mastodon" rel="me">
+                    <svg viewBox="0 0 24 24"><path d="M23.268 5.313c-.35-2.578-2.617-4.61-5.304-5.004C17.51.242 15.792 0 11.813 0h-.03c-3.98 0-4.835.242-5.288.309C3.882.692 1.496 2.518.917 5.127.64 6.412.61 7.837.661 9.143c.074 1.874.088 3.745.26 5.611.118 1.24.325 2.47.62 3.68.55 2.237 2.777 4.098 4.96 4.857 2.336.792 4.849.923 7.256.38.265-.061.527-.132.786-.213.585-.184 1.27-.39 1.774-.753a.057.057 0 0 0 .023-.043v-1.809a.052.052 0 0 0-.02-.041.053.053 0 0 0-.046-.01 20.282 20.282 0 0 1-4.709.547c-2.73 0-3.463-1.284-3.674-1.818a5.593 5.593 0 0 1-.319-1.433.053.053 0 0 1 .066-.054 19.648 19.648 0 0 0 4.581.536h.342c1.682 0 3.375-.093 5.036-.364 2.478-.405 4.636-1.667 4.864-5.059.016-.124.042-.477.042-.477.042-.4.198-2.803-.042-4.29zm-3.587 7.042h-2.39V7.28c0-1.274-.546-1.922-1.636-1.922-1.206 0-1.811.768-1.811 2.287v2.82h-2.376V7.645c0-1.52-.606-2.287-1.812-2.287-1.09 0-1.636.648-1.636 1.922v5.075H5.63V7.082c0-1.274.327-2.287.98-3.04.675-.752 1.56-1.137 2.657-1.137 1.27 0 2.23.484 2.868 1.45l.617 1.028.618-1.028c.637-.966 1.598-1.45 2.867-1.45 1.097 0 1.982.385 2.657 1.137.653.753.98 1.766.98 3.04v5.273z"/></svg>
+                </a>
+                <a href="https://www.reddit.com/r/chartyapp" aria-label="Charty on Reddit">
+                    <svg viewBox="0 0 24 24"><path d="M24 11.779c0-1.459-1.192-2.645-2.657-2.645-.715 0-1.363.286-1.84.746-1.81-1.191-4.259-1.949-6.971-2.046l1.483-4.669 4.016.941-.006.058c0 1.193.975 2.163 2.174 2.163 1.198 0 2.172-.97 2.172-2.163s-.975-2.164-2.172-2.164c-.92 0-1.704.574-2.021 1.379l-4.329-1.015c-.189-.046-.381.063-.44.249l-1.654 5.207c-2.838.034-5.409.798-7.3 2.025-.474-.438-1.103-.712-1.799-.712C1.192 9.134 0 10.32 0 11.779c0 .974.55 1.824 1.35 2.27-.083.39-.127.792-.127 1.2 0 4.286 4.917 7.751 10.977 7.751s10.977-3.465 10.977-7.751c0-.399-.042-.793-.122-1.175.8-.443 1.345-1.29 1.345-2.295zM6.92 13.94c0-.81.662-1.468 1.479-1.468.816 0 1.478.657 1.478 1.468 0 .81-.662 1.467-1.478 1.467-.817 0-1.479-.657-1.479-1.467zm8.271 4.305c-.944.924-2.281 1.254-3.376 1.254h-.01c-1.095 0-2.432-.33-3.376-1.254-.147-.144-.147-.38 0-.524.147-.145.386-.145.533 0 .753.738 1.876 1.018 2.843 1.018h.01c.967 0 2.09-.28 2.843-1.018.147-.145.386-.145.533 0 .147.144.147.38 0 .524zm-.2-2.838c-.817 0-1.479-.657-1.479-1.467 0-.811.662-1.468 1.479-1.468.816 0 1.478.657 1.478 1.468 0 .81-.662 1.467-1.478 1.467z"/></svg>
+                </a>
+            </div>
+            <p class="footer-credit">Developed by <a href="https://mastodon.social/@rmaraujo" rel="me">Rodrigo Araújo</a> at <a href="https://rapptor.dev">Rapptor</a></p>
+        </div>
+    </footer>
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-3.2.1.min.js"></script>
-        <script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
-        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
-        <!-- <script src="assets/js/wow.min.js"></script> -->
-        <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
-        <!-- <script src="assets/js/waypoints.min.js"></script> -->
-        <script src="assets/js/scripts.js"></script>
-    </body>
+    <script src="assets/js/scripts-v2.js"></script>
+</body>
 </html>
